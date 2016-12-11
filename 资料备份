@@ -1,0 +1,28 @@
+go rabitmq 实践
+http://studygolang.com/articles/4801
+
+rabbitmq 简介
+http://blog.csdn.net/whycold/article/details/41119807
+
+Ubuntu14.04+RabbitMQ3.6.3+Golang的最佳实践
+http://www.cnblogs.com/lion.net/p/5725470.html
+
+
+
+echo "# golang-project" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/liuyuanlin/golang-project.git
+git push -u origin master
+
+
+git remote add origin https://github.com/liuyuanlin/golang-project.git
+git push -u origin master
+
+如何在github上协作工作
+http://os.51cto.com/art/201308/408674.htm
+
+git常用命令
+http://www.cnblogs.com/mengdd/p/4153773.html
+
