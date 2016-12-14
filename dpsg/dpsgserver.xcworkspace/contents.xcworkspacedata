@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../../engine/src/Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../engine/src/Network/libevent-1.4.14b-stable/libevent.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../engine/src/Network/NetWork.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FightServer/FightServer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Robot/Robot.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -1,0 +1,694 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D00013F171E34F6008FB4D0 /* LogicAvatar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D00013D171E34F6008FB4D0 /* LogicAvatar.cpp */; };
+		8D06C00F171F9B2500AEA9B5 /* CRBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D06C00D171F9B2500AEA9B5 /* CRBuilding.cpp */; };
+		8D077585171CE6C000947B8D /* CRobot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D077583171CE6C000947B8D /* CRobot.cpp */; };
+		8D0F7DC9171EC5EB0066B8E5 /* RUserData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F7DC7171EC5EB0066B8E5 /* RUserData.cpp */; };
+		8D1079EC171E8CBE00580560 /* LogicClanComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D1079EA171E8CBE00580560 /* LogicClanComponent.cpp */; };
+		8D348D0317DF056300E9F66B /* LogicBuildingUpgradeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D348D0117DF056300E9F66B /* LogicBuildingUpgradeComponent.cpp */; };
+		8D939C431775480B0090EA32 /* LogicBuff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D939C3D1775480B0090EA32 /* LogicBuff.cpp */; };
+		8D939C441775480B0090EA32 /* LogicHeroSummonComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D939C3F1775480B0090EA32 /* LogicHeroSummonComponent.cpp */; };
+		8D939C451775480B0090EA32 /* LogicHeroUpgradeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D939C411775480B0090EA32 /* LogicHeroUpgradeCommand.cpp */; };
+		8D96FB30181F60460056C4B7 /* LogicSpellProductionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D96FB23181F60460056C4B7 /* LogicSpellProductionComponent.cpp */; };
+		8D96FB32181F60460056C4B7 /* LogicSpellUpgradeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D96FB27181F60460056C4B7 /* LogicSpellUpgradeCommand.cpp */; };
+		8D96FB33181F60460056C4B7 /* LogicSpellUpgradeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D96FB29181F60460056C4B7 /* LogicSpellUpgradeComponent.cpp */; };
+		8D96FB35181F60460056C4B7 /* LogSpellSkillComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D96FB2D181F60460056C4B7 /* LogSpellSkillComponent.cpp */; };
+		8D9D8C17171C1AF50018C8BD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C16171C1AF50018C8BD /* main.cpp */; };
+		8D9D8C19171C1AF50018C8BD /* Robot.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D9D8C18171C1AF50018C8BD /* Robot.1 */; };
+		8D9D8C23171C1B430018C8BD /* msg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C20171C1B430018C8BD /* msg.pb.cc */; };
+		8D9D8C25171C1E080018C8BD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9D8C24171C1E080018C8BD /* libxml2.dylib */; };
+		8D9D8C27171C1E100018C8BD /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9D8C26171C1E100018C8BD /* libstdc++.6.dylib */; };
+		8D9D8C34171C26C30018C8BD /* CConnectionMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C30171C26C30018C8BD /* CConnectionMgr.cpp */; };
+		8D9D8C35171C26C30018C8BD /* CRobotDispacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C32171C26C30018C8BD /* CRobotDispacher.cpp */; };
+		8D9D8C8B171C2CA80018C8BD /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C40171C2CA80018C8BD /* ConfigManager.cpp */; };
+		8D9D8C8C171C2CA80018C8BD /* LogicBattle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C43171C2CA80018C8BD /* LogicBattle.cpp */; };
+		8D9D8C8D171C2CA80018C8BD /* LogicBuildCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C45171C2CA80018C8BD /* LogicBuildCommand.cpp */; };
+		8D9D8C8E171C2CA80018C8BD /* LogicBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C47171C2CA80018C8BD /* LogicBuilding.cpp */; };
+		8D9D8C8F171C2CA80018C8BD /* LogicCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C49171C2CA80018C8BD /* LogicCharacter.cpp */; };
+		8D9D8C90171C2CA80018C8BD /* LogicCombatComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C4B171C2CA80018C8BD /* LogicCombatComponent.cpp */; };
+		8D9D8C91171C2CA80018C8BD /* LogicCommandManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C4D171C2CA80018C8BD /* LogicCommandManager.cpp */; };
+		8D9D8C92171C2CA80018C8BD /* LogicComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C4F171C2CA80018C8BD /* LogicComponent.cpp */; };
+		8D9D8C93171C2CA80018C8BD /* LogicFinishNowCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C51171C2CA80018C8BD /* LogicFinishNowCommand.cpp */; };
+		8D9D8C94171C2CA80018C8BD /* LogicGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C54171C2CA80018C8BD /* LogicGameObject.cpp */; };
+		8D9D8C95171C2CA80018C8BD /* LogicHitpointComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C56171C2CA80018C8BD /* LogicHitpointComponent.cpp */; };
+		8D9D8C96171C2CA80018C8BD /* LogicInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C58171C2CA80018C8BD /* LogicInitializer.cpp */; };
+		8D9D8C97171C2CA80018C8BD /* LogicMemoryLeckDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C5B171C2CA80018C8BD /* LogicMemoryLeckDetector.cpp */; };
+		8D9D8C98171C2CA80018C8BD /* LogicMessageDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C5F171C2CA80018C8BD /* LogicMessageDispatcher.cpp */; };
+		8D9D8C99171C2CA80018C8BD /* LogicMessagePort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C61171C2CA80018C8BD /* LogicMessagePort.cpp */; };
+		8D9D8C9A171C2CA80018C8BD /* LogicMovementComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C63171C2CA80018C8BD /* LogicMovementComponent.cpp */; };
+		8D9D8C9B171C2CA80018C8BD /* LogicPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C65171C2CA80018C8BD /* LogicPath.cpp */; };
+		8D9D8C9C171C2CA80018C8BD /* LogicPathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C67171C2CA80018C8BD /* LogicPathFinder.cpp */; };
+		8D9D8C9D171C2CA80018C8BD /* LogicResProductionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C69171C2CA80018C8BD /* LogicResProductionComponent.cpp */; };
+		8D9D8C9E171C2CA80018C8BD /* LogicResStorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C6B171C2CA80018C8BD /* LogicResStorageComponent.cpp */; };
+		8D9D8C9F171C2CA80018C8BD /* LogicSkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C6D171C2CA80018C8BD /* LogicSkill.cpp */; };
+		8D9D8CA0171C2CA80018C8BD /* LogicSkillManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C6F171C2CA80018C8BD /* LogicSkillManager.cpp */; };
+		8D9D8CA1171C2CA80018C8BD /* LogicTickManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C71171C2CA80018C8BD /* LogicTickManager.cpp */; };
+		8D9D8CA2171C2CA80018C8BD /* LogicTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C73171C2CA80018C8BD /* LogicTimer.cpp */; };
+		8D9D8CA3171C2CA80018C8BD /* LogicTrainingUnitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C75171C2CA80018C8BD /* LogicTrainingUnitCommand.cpp */; };
+		8D9D8CA4171C2CA80018C8BD /* LogicUnitProductionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C77171C2CA80018C8BD /* LogicUnitProductionComponent.cpp */; };
+		8D9D8CA5171C2CA80018C8BD /* LogicUnitStorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C79171C2CA80018C8BD /* LogicUnitStorageComponent.cpp */; };
+		8D9D8CA6171C2CA80018C8BD /* LogicUnitUpgradeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C7B171C2CA80018C8BD /* LogicUnitUpgradeCommand.cpp */; };
+		8D9D8CA7171C2CA80018C8BD /* LogicUnitUpgradeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C7D171C2CA80018C8BD /* LogicUnitUpgradeComponent.cpp */; };
+		8D9D8CA8171C2CA80018C8BD /* LogicUtilityFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C7F171C2CA80018C8BD /* LogicUtilityFunctions.cpp */; };
+		8D9D8CA9171C2CA80018C8BD /* LogicVillage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C81171C2CA80018C8BD /* LogicVillage.cpp */; };
+		8D9D8CAA171C2CA80018C8BD /* LogicWorkerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C83171C2CA80018C8BD /* LogicWorkerManager.cpp */; };
+		8D9D8CAC171C2CA80018C8BD /* TimeSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C87171C2CA80018C8BD /* TimeSystem.cpp */; };
+		8D9D8CAD171C2CA80018C8BD /* XMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D8C89171C2CA80018C8BD /* XMLParser.cpp */; };
+		9D0FB7BB183468D7002844AF /* LogicSpellStorageCpmponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D0FB7B7183468D7002844AF /* LogicSpellStorageCpmponent.cpp */; };
+		9D0FB7BC183468D7002844AF /* LogicTrainingSpellCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D0FB7B9183468D7002844AF /* LogicTrainingSpellCommand.cpp */; };
+		D3654E5E1893AA2D00B40F71 /* libCommon.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D3654E5B1893AA2D00B40F71 /* libCommon.so */; };
+		D3654E601893AA2D00B40F71 /* libnet.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D3654E5D1893AA2D00B40F71 /* libnet.so */; };
+		D3654E621893AB0C00B40F71 /* libprotobuf.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D3654E611893AB0C00B40F71 /* libprotobuf.so */; };
+		D3654E641893AB4000B40F71 /* libsnappy.so in Frameworks */ = {isa = PBXBuildFile; fileRef = D3654E631893AB4000B40F71 /* libsnappy.so */; };
+		D39A66691869582300FEA3FE /* CVillageCheck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39A66681869582300FEA3FE /* CVillageCheck.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D9D8C11171C1AF50018C8BD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+				8D9D8C19171C1AF50018C8BD /* Robot.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8D00013D171E34F6008FB4D0 /* LogicAvatar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicAvatar.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicAvatar.cpp; sourceTree = "<group>"; };
+		8D00013E171E34F6008FB4D0 /* LogicAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicAvatar.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicAvatar.h; sourceTree = "<group>"; };
+		8D06C00D171F9B2500AEA9B5 /* CRBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CRBuilding.cpp; sourceTree = "<group>"; };
+		8D06C00E171F9B2500AEA9B5 /* CRBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBuilding.h; sourceTree = "<group>"; };
+		8D077583171CE6C000947B8D /* CRobot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CRobot.cpp; sourceTree = "<group>"; };
+		8D077584171CE6C000947B8D /* CRobot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRobot.h; sourceTree = "<group>"; };
+		8D0F7DC7171EC5EB0066B8E5 /* RUserData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RUserData.cpp; sourceTree = "<group>"; };
+		8D0F7DC8171EC5EB0066B8E5 /* RUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RUserData.h; sourceTree = "<group>"; };
+		8D1079EA171E8CBE00580560 /* LogicClanComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicClanComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicClanComponent.cpp; sourceTree = "<group>"; };
+		8D1079EB171E8CBE00580560 /* LogicClanComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicClanComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicClanComponent.h; sourceTree = "<group>"; };
+		8D348D0117DF056300E9F66B /* LogicBuildingUpgradeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuildingUpgradeComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildingUpgradeComponent.cpp; sourceTree = "<group>"; };
+		8D348D0217DF056300E9F66B /* LogicBuildingUpgradeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuildingUpgradeComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildingUpgradeComponent.h; sourceTree = "<group>"; };
+		8D939C3D1775480B0090EA32 /* LogicBuff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuff.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuff.cpp; sourceTree = "<group>"; };
+		8D939C3E1775480B0090EA32 /* LogicBuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuff.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuff.h; sourceTree = "<group>"; };
+		8D939C3F1775480B0090EA32 /* LogicHeroSummonComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicHeroSummonComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroSummonComponent.cpp; sourceTree = "<group>"; };
+		8D939C401775480B0090EA32 /* LogicHeroSummonComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicHeroSummonComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroSummonComponent.h; sourceTree = "<group>"; };
+		8D939C411775480B0090EA32 /* LogicHeroUpgradeCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicHeroUpgradeCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroUpgradeCommand.cpp; sourceTree = "<group>"; };
+		8D939C421775480B0090EA32 /* LogicHeroUpgradeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicHeroUpgradeCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroUpgradeCommand.h; sourceTree = "<group>"; };
+		8D96FB23181F60460056C4B7 /* LogicSpellProductionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSpellProductionComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellProductionComponent.cpp; sourceTree = "<group>"; };
+		8D96FB24181F60460056C4B7 /* LogicSpellProductionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSpellProductionComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellProductionComponent.h; sourceTree = "<group>"; };
+		8D96FB25181F60460056C4B7 /* LogicSpellStorageCpmponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSpellStorageCpmponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellStorageCpmponent.cpp; sourceTree = "<group>"; };
+		8D96FB26181F60460056C4B7 /* LogicSpellStorageCpmponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSpellStorageCpmponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellStorageCpmponent.h; sourceTree = "<group>"; };
+		8D96FB27181F60460056C4B7 /* LogicSpellUpgradeCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSpellUpgradeCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellUpgradeCommand.cpp; sourceTree = "<group>"; };
+		8D96FB28181F60460056C4B7 /* LogicSpellUpgradeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSpellUpgradeCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellUpgradeCommand.h; sourceTree = "<group>"; };
+		8D96FB29181F60460056C4B7 /* LogicSpellUpgradeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSpellUpgradeComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellUpgradeComponent.cpp; sourceTree = "<group>"; };
+		8D96FB2A181F60460056C4B7 /* LogicSpellUpgradeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSpellUpgradeComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellUpgradeComponent.h; sourceTree = "<group>"; };
+		8D96FB2B181F60460056C4B7 /* LogicTrainingSpellCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicTrainingSpellCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingSpellCommand.cpp; sourceTree = "<group>"; };
+		8D96FB2C181F60460056C4B7 /* LogicTrainingSpellCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicTrainingSpellCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingSpellCommand.h; sourceTree = "<group>"; };
+		8D96FB2D181F60460056C4B7 /* LogSpellSkillComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogSpellSkillComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogSpellSkillComponent.cpp; sourceTree = "<group>"; };
+		8D96FB2E181F60460056C4B7 /* LogSpellSkillComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogSpellSkillComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogSpellSkillComponent.h; sourceTree = "<group>"; };
+		8D96FB2F181F60460056C4B7 /* SpellConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpellConversion.h; path = ../../../../client/dpsg/Classes/GameLogic/SpellConversion.h; sourceTree = "<group>"; };
+		8D9D8C13171C1AF50018C8BD /* Robot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Robot; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D9D8C16171C1AF50018C8BD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8D9D8C18171C1AF50018C8BD /* Robot.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Robot.1; sourceTree = "<group>"; };
+		8D9D8C20171C1B430018C8BD /* msg.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msg.pb.cc; path = ../../../rpc/proto/msg.pb.cc; sourceTree = "<group>"; };
+		8D9D8C21171C1B430018C8BD /* msg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msg.pb.h; path = ../../../rpc/proto/msg.pb.h; sourceTree = "<group>"; };
+		8D9D8C22171C1B430018C8BD /* msg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = msg.proto; path = ../../../rpc/proto/msg.proto; sourceTree = "<group>"; };
+		8D9D8C24171C1E080018C8BD /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		8D9D8C26171C1E100018C8BD /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		8D9D8C30171C26C30018C8BD /* CConnectionMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CConnectionMgr.cpp; sourceTree = "<group>"; };
+		8D9D8C31171C26C30018C8BD /* CConnectionMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CConnectionMgr.h; sourceTree = "<group>"; };
+		8D9D8C32171C26C30018C8BD /* CRobotDispacher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CRobotDispacher.cpp; sourceTree = "<group>"; };
+		8D9D8C33171C26C30018C8BD /* CRobotDispacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRobotDispacher.h; sourceTree = "<group>"; };
+		8D9D8C40171C2CA80018C8BD /* ConfigManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConfigManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/ConfigManager.cpp; sourceTree = "<group>"; };
+		8D9D8C41171C2CA80018C8BD /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigManager.h; path = ../../../../client/dpsg/Classes/GameLogic/ConfigManager.h; sourceTree = "<group>"; };
+		8D9D8C42171C2CA80018C8BD /* GameLogicDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLogicDefinitions.h; path = ../../../../client/dpsg/Classes/GameLogic/GameLogicDefinitions.h; sourceTree = "<group>"; };
+		8D9D8C43171C2CA80018C8BD /* LogicBattle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBattle.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBattle.cpp; sourceTree = "<group>"; };
+		8D9D8C44171C2CA80018C8BD /* LogicBattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBattle.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBattle.h; sourceTree = "<group>"; };
+		8D9D8C45171C2CA80018C8BD /* LogicBuildCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuildCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildCommand.cpp; sourceTree = "<group>"; };
+		8D9D8C46171C2CA80018C8BD /* LogicBuildCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuildCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildCommand.h; sourceTree = "<group>"; };
+		8D9D8C47171C2CA80018C8BD /* LogicBuilding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuilding.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuilding.cpp; sourceTree = "<group>"; };
+		8D9D8C48171C2CA80018C8BD /* LogicBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuilding.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuilding.h; sourceTree = "<group>"; };
+		8D9D8C49171C2CA80018C8BD /* LogicCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicCharacter.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCharacter.cpp; sourceTree = "<group>"; };
+		8D9D8C4A171C2CA80018C8BD /* LogicCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicCharacter.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCharacter.h; sourceTree = "<group>"; };
+		8D9D8C4B171C2CA80018C8BD /* LogicCombatComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicCombatComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCombatComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C4C171C2CA80018C8BD /* LogicCombatComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicCombatComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCombatComponent.h; sourceTree = "<group>"; };
+		8D9D8C4D171C2CA80018C8BD /* LogicCommandManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicCommandManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCommandManager.cpp; sourceTree = "<group>"; };
+		8D9D8C4E171C2CA80018C8BD /* LogicCommandManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicCommandManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCommandManager.h; sourceTree = "<group>"; };
+		8D9D8C4F171C2CA80018C8BD /* LogicComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C50171C2CA80018C8BD /* LogicComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicComponent.h; sourceTree = "<group>"; };
+		8D9D8C51171C2CA80018C8BD /* LogicFinishNowCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicFinishNowCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicFinishNowCommand.cpp; sourceTree = "<group>"; };
+		8D9D8C52171C2CA80018C8BD /* LogicFinishNowCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicFinishNowCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicFinishNowCommand.h; sourceTree = "<group>"; };
+		8D9D8C53171C2CA80018C8BD /* LogicFloat2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicFloat2.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicFloat2.h; sourceTree = "<group>"; };
+		8D9D8C54171C2CA80018C8BD /* LogicGameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicGameObject.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicGameObject.cpp; sourceTree = "<group>"; };
+		8D9D8C55171C2CA80018C8BD /* LogicGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicGameObject.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicGameObject.h; sourceTree = "<group>"; };
+		8D9D8C56171C2CA80018C8BD /* LogicHitpointComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicHitpointComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHitpointComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C57171C2CA80018C8BD /* LogicHitpointComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicHitpointComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHitpointComponent.h; sourceTree = "<group>"; };
+		8D9D8C58171C2CA80018C8BD /* LogicInitializer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicInitializer.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicInitializer.cpp; sourceTree = "<group>"; };
+		8D9D8C59171C2CA80018C8BD /* LogicInitializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicInitializer.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicInitializer.h; sourceTree = "<group>"; };
+		8D9D8C5A171C2CA80018C8BD /* LogicLine2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicLine2.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicLine2.h; sourceTree = "<group>"; };
+		8D9D8C5B171C2CA80018C8BD /* LogicMemoryLeckDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicMemoryLeckDetector.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMemoryLeckDetector.cpp; sourceTree = "<group>"; };
+		8D9D8C5C171C2CA80018C8BD /* LogicMemoryLeckDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMemoryLeckDetector.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMemoryLeckDetector.h; sourceTree = "<group>"; };
+		8D9D8C5D171C2CA80018C8BD /* LogicMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMessage.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessage.h; sourceTree = "<group>"; };
+		8D9D8C5E171C2CA80018C8BD /* LogicMessageDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMessageDefinition.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDefinition.h; sourceTree = "<group>"; };
+		8D9D8C5F171C2CA80018C8BD /* LogicMessageDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicMessageDispatcher.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDispatcher.cpp; sourceTree = "<group>"; };
+		8D9D8C60171C2CA80018C8BD /* LogicMessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMessageDispatcher.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDispatcher.h; sourceTree = "<group>"; };
+		8D9D8C61171C2CA80018C8BD /* LogicMessagePort.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicMessagePort.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessagePort.cpp; sourceTree = "<group>"; };
+		8D9D8C62171C2CA80018C8BD /* LogicMessagePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMessagePort.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessagePort.h; sourceTree = "<group>"; };
+		8D9D8C63171C2CA80018C8BD /* LogicMovementComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicMovementComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMovementComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C64171C2CA80018C8BD /* LogicMovementComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMovementComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMovementComponent.h; sourceTree = "<group>"; };
+		8D9D8C65171C2CA80018C8BD /* LogicPath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicPath.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicPath.cpp; sourceTree = "<group>"; };
+		8D9D8C66171C2CA80018C8BD /* LogicPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicPath.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicPath.h; sourceTree = "<group>"; };
+		8D9D8C67171C2CA80018C8BD /* LogicPathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicPathFinder.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicPathFinder.cpp; sourceTree = "<group>"; };
+		8D9D8C68171C2CA80018C8BD /* LogicPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicPathFinder.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicPathFinder.h; sourceTree = "<group>"; };
+		8D9D8C69171C2CA80018C8BD /* LogicResProductionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicResProductionComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicResProductionComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C6A171C2CA80018C8BD /* LogicResProductionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicResProductionComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicResProductionComponent.h; sourceTree = "<group>"; };
+		8D9D8C6B171C2CA80018C8BD /* LogicResStorageComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicResStorageComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicResStorageComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C6C171C2CA80018C8BD /* LogicResStorageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicResStorageComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicResStorageComponent.h; sourceTree = "<group>"; };
+		8D9D8C6D171C2CA80018C8BD /* LogicSkill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSkill.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkill.cpp; sourceTree = "<group>"; };
+		8D9D8C6E171C2CA80018C8BD /* LogicSkill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSkill.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkill.h; sourceTree = "<group>"; };
+		8D9D8C6F171C2CA80018C8BD /* LogicSkillManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSkillManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkillManager.cpp; sourceTree = "<group>"; };
+		8D9D8C70171C2CA80018C8BD /* LogicSkillManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSkillManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkillManager.h; sourceTree = "<group>"; };
+		8D9D8C71171C2CA80018C8BD /* LogicTickManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicTickManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTickManager.cpp; sourceTree = "<group>"; };
+		8D9D8C72171C2CA80018C8BD /* LogicTickManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicTickManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTickManager.h; sourceTree = "<group>"; };
+		8D9D8C73171C2CA80018C8BD /* LogicTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicTimer.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTimer.cpp; sourceTree = "<group>"; };
+		8D9D8C74171C2CA80018C8BD /* LogicTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicTimer.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTimer.h; sourceTree = "<group>"; };
+		8D9D8C75171C2CA80018C8BD /* LogicTrainingUnitCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicTrainingUnitCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingUnitCommand.cpp; sourceTree = "<group>"; };
+		8D9D8C76171C2CA80018C8BD /* LogicTrainingUnitCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicTrainingUnitCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingUnitCommand.h; sourceTree = "<group>"; };
+		8D9D8C77171C2CA80018C8BD /* LogicUnitProductionComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicUnitProductionComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitProductionComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C78171C2CA80018C8BD /* LogicUnitProductionComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicUnitProductionComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitProductionComponent.h; sourceTree = "<group>"; };
+		8D9D8C79171C2CA80018C8BD /* LogicUnitStorageComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicUnitStorageComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitStorageComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C7A171C2CA80018C8BD /* LogicUnitStorageComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicUnitStorageComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitStorageComponent.h; sourceTree = "<group>"; };
+		8D9D8C7B171C2CA80018C8BD /* LogicUnitUpgradeCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicUnitUpgradeCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeCommand.cpp; sourceTree = "<group>"; };
+		8D9D8C7C171C2CA80018C8BD /* LogicUnitUpgradeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicUnitUpgradeCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeCommand.h; sourceTree = "<group>"; };
+		8D9D8C7D171C2CA80018C8BD /* LogicUnitUpgradeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicUnitUpgradeComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeComponent.cpp; sourceTree = "<group>"; };
+		8D9D8C7E171C2CA80018C8BD /* LogicUnitUpgradeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicUnitUpgradeComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeComponent.h; sourceTree = "<group>"; };
+		8D9D8C7F171C2CA80018C8BD /* LogicUtilityFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicUtilityFunctions.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUtilityFunctions.cpp; sourceTree = "<group>"; };
+		8D9D8C80171C2CA80018C8BD /* LogicUtilityFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicUtilityFunctions.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUtilityFunctions.h; sourceTree = "<group>"; };
+		8D9D8C81171C2CA80018C8BD /* LogicVillage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicVillage.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicVillage.cpp; sourceTree = "<group>"; };
+		8D9D8C82171C2CA80018C8BD /* LogicVillage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicVillage.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicVillage.h; sourceTree = "<group>"; };
+		8D9D8C83171C2CA80018C8BD /* LogicWorkerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicWorkerManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicWorkerManager.cpp; sourceTree = "<group>"; };
+		8D9D8C84171C2CA80018C8BD /* LogicWorkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicWorkerManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicWorkerManager.h; sourceTree = "<group>"; };
+		8D9D8C86171C2CA80018C8BD /* MemoryAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryAllocator.h; path = ../../../../client/dpsg/Classes/GameLogic/MemoryAllocator.h; sourceTree = "<group>"; };
+		8D9D8C87171C2CA80018C8BD /* TimeSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeSystem.cpp; path = ../../../../client/dpsg/Classes/GameLogic/TimeSystem.cpp; sourceTree = "<group>"; };
+		8D9D8C88171C2CA80018C8BD /* TimeSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeSystem.h; path = ../../../../client/dpsg/Classes/GameLogic/TimeSystem.h; sourceTree = "<group>"; };
+		8D9D8C89171C2CA80018C8BD /* XMLParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XMLParser.cpp; path = ../../../../client/dpsg/Classes/GameLogic/XMLParser.cpp; sourceTree = "<group>"; };
+		8D9D8C8A171C2CA80018C8BD /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../../../../client/dpsg/Classes/GameLogic/XMLParser.h; sourceTree = "<group>"; };
+		9D0FB7B7183468D7002844AF /* LogicSpellStorageCpmponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicSpellStorageCpmponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellStorageCpmponent.cpp; sourceTree = "<group>"; };
+		9D0FB7B8183468D7002844AF /* LogicSpellStorageCpmponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicSpellStorageCpmponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSpellStorageCpmponent.h; sourceTree = "<group>"; };
+		9D0FB7B9183468D7002844AF /* LogicTrainingSpellCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicTrainingSpellCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingSpellCommand.cpp; sourceTree = "<group>"; };
+		9D0FB7BA183468D7002844AF /* LogicTrainingSpellCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicTrainingSpellCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingSpellCommand.h; sourceTree = "<group>"; };
+		D3654E5B1893AA2D00B40F71 /* libCommon.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCommon.so; path = ../../../bin/libCommon.so; sourceTree = "<group>"; };
+		D3654E5D1893AA2D00B40F71 /* libnet.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libnet.so; path = ../../../bin/libnet.so; sourceTree = "<group>"; };
+		D3654E611893AB0C00B40F71 /* libprotobuf.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprotobuf.so; path = ../../../bin/libprotobuf.so; sourceTree = "<group>"; };
+		D3654E631893AB4000B40F71 /* libsnappy.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsnappy.so; path = ../../../bin/libsnappy.so; sourceTree = "<group>"; };
+		D39A66671869556F00FEA3FE /* CVillageCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVillageCheck.h; sourceTree = "<group>"; };
+		D39A66681869582300FEA3FE /* CVillageCheck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CVillageCheck.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D9D8C10171C1AF50018C8BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3654E641893AB4000B40F71 /* libsnappy.so in Frameworks */,
+				D3654E621893AB0C00B40F71 /* libprotobuf.so in Frameworks */,
+				D3654E5E1893AA2D00B40F71 /* libCommon.so in Frameworks */,
+				D3654E601893AA2D00B40F71 /* libnet.so in Frameworks */,
+				8D9D8C27171C1E100018C8BD /* libstdc++.6.dylib in Frameworks */,
+				8D9D8C25171C1E080018C8BD /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D000140171E7127008FB4D0 /* GameFramework */ = {
+			isa = PBXGroup;
+			children = (
+				8D000141171E7167008FB4D0 /* Utility */,
+			);
+			name = GameFramework;
+			sourceTree = "<group>";
+		};
+		8D000141171E7167008FB4D0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				8D000142171E7170008FB4D0 /* UserData */,
+				8D000149171E71B7008FB4D0 /* FileSystem */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		8D000142171E7170008FB4D0 /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				8D0F7DC7171EC5EB0066B8E5 /* RUserData.cpp */,
+				8D0F7DC8171EC5EB0066B8E5 /* RUserData.h */,
+			);
+			name = UserData;
+			sourceTree = "<group>";
+		};
+		8D000149171E71B7008FB4D0 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FileSystem;
+			sourceTree = "<group>";
+		};
+		8D9D8C0A171C1AF50018C8BD = {
+			isa = PBXGroup;
+			children = (
+				8D9D8C1F171C1B2F0018C8BD /* RPC */,
+				8D9D8C2F171C26930018C8BD /* ConnectionMgr */,
+				8D9D8C15171C1AF50018C8BD /* Robot */,
+				8D9D8C2E171C26230018C8BD /* Frameworks */,
+				8D9D8C14171C1AF50018C8BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D9D8C14171C1AF50018C8BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D8C13171C1AF50018C8BD /* Robot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D9D8C15171C1AF50018C8BD /* Robot */ = {
+			isa = PBXGroup;
+			children = (
+				D39A66681869582300FEA3FE /* CVillageCheck.cpp */,
+				D39A66671869556F00FEA3FE /* CVillageCheck.h */,
+				8D077583171CE6C000947B8D /* CRobot.cpp */,
+				8D077584171CE6C000947B8D /* CRobot.h */,
+				8D06C00D171F9B2500AEA9B5 /* CRBuilding.cpp */,
+				8D06C00E171F9B2500AEA9B5 /* CRBuilding.h */,
+				8D9D8C3F171C2C920018C8BD /* GameLogic */,
+				8D000140171E7127008FB4D0 /* GameFramework */,
+				8D9D8C16171C1AF50018C8BD /* main.cpp */,
+				8D9D8C18171C1AF50018C8BD /* Robot.1 */,
+			);
+			path = Robot;
+			sourceTree = "<group>";
+		};
+		8D9D8C1F171C1B2F0018C8BD /* RPC */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D8C20171C1B430018C8BD /* msg.pb.cc */,
+				8D9D8C21171C1B430018C8BD /* msg.pb.h */,
+				8D9D8C22171C1B430018C8BD /* msg.proto */,
+			);
+			name = RPC;
+			sourceTree = "<group>";
+		};
+		8D9D8C2E171C26230018C8BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3654E631893AB4000B40F71 /* libsnappy.so */,
+				D3654E611893AB0C00B40F71 /* libprotobuf.so */,
+				D3654E5B1893AA2D00B40F71 /* libCommon.so */,
+				D3654E5D1893AA2D00B40F71 /* libnet.so */,
+				8D9D8C26171C1E100018C8BD /* libstdc++.6.dylib */,
+				8D9D8C24171C1E080018C8BD /* libxml2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D9D8C2F171C26930018C8BD /* ConnectionMgr */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D8C30171C26C30018C8BD /* CConnectionMgr.cpp */,
+				8D9D8C31171C26C30018C8BD /* CConnectionMgr.h */,
+				8D9D8C32171C26C30018C8BD /* CRobotDispacher.cpp */,
+				8D9D8C33171C26C30018C8BD /* CRobotDispacher.h */,
+			);
+			path = ConnectionMgr;
+			sourceTree = "<group>";
+		};
+		8D9D8C3F171C2C920018C8BD /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				8D96FB23181F60460056C4B7 /* LogicSpellProductionComponent.cpp */,
+				8D96FB24181F60460056C4B7 /* LogicSpellProductionComponent.h */,
+				8D96FB25181F60460056C4B7 /* LogicSpellStorageCpmponent.cpp */,
+				8D96FB26181F60460056C4B7 /* LogicSpellStorageCpmponent.h */,
+				8D96FB27181F60460056C4B7 /* LogicSpellUpgradeCommand.cpp */,
+				8D96FB28181F60460056C4B7 /* LogicSpellUpgradeCommand.h */,
+				8D96FB29181F60460056C4B7 /* LogicSpellUpgradeComponent.cpp */,
+				8D96FB2A181F60460056C4B7 /* LogicSpellUpgradeComponent.h */,
+				8D96FB2B181F60460056C4B7 /* LogicTrainingSpellCommand.cpp */,
+				8D96FB2C181F60460056C4B7 /* LogicTrainingSpellCommand.h */,
+				8D96FB2D181F60460056C4B7 /* LogSpellSkillComponent.cpp */,
+				8D96FB2E181F60460056C4B7 /* LogSpellSkillComponent.h */,
+				8D96FB2F181F60460056C4B7 /* SpellConversion.h */,
+				9D0FB7B7183468D7002844AF /* LogicSpellStorageCpmponent.cpp */,
+				9D0FB7B8183468D7002844AF /* LogicSpellStorageCpmponent.h */,
+				9D0FB7B9183468D7002844AF /* LogicTrainingSpellCommand.cpp */,
+				9D0FB7BA183468D7002844AF /* LogicTrainingSpellCommand.h */,
+				8D348D0117DF056300E9F66B /* LogicBuildingUpgradeComponent.cpp */,
+				8D348D0217DF056300E9F66B /* LogicBuildingUpgradeComponent.h */,
+				8D939C3D1775480B0090EA32 /* LogicBuff.cpp */,
+				8D939C3E1775480B0090EA32 /* LogicBuff.h */,
+				8D939C3F1775480B0090EA32 /* LogicHeroSummonComponent.cpp */,
+				8D939C401775480B0090EA32 /* LogicHeroSummonComponent.h */,
+				8D939C411775480B0090EA32 /* LogicHeroUpgradeCommand.cpp */,
+				8D939C421775480B0090EA32 /* LogicHeroUpgradeCommand.h */,
+				8D1079EA171E8CBE00580560 /* LogicClanComponent.cpp */,
+				8D1079EB171E8CBE00580560 /* LogicClanComponent.h */,
+				8D00013D171E34F6008FB4D0 /* LogicAvatar.cpp */,
+				8D00013E171E34F6008FB4D0 /* LogicAvatar.h */,
+				8D9D8C40171C2CA80018C8BD /* ConfigManager.cpp */,
+				8D9D8C41171C2CA80018C8BD /* ConfigManager.h */,
+				8D9D8C42171C2CA80018C8BD /* GameLogicDefinitions.h */,
+				8D9D8C43171C2CA80018C8BD /* LogicBattle.cpp */,
+				8D9D8C44171C2CA80018C8BD /* LogicBattle.h */,
+				8D9D8C45171C2CA80018C8BD /* LogicBuildCommand.cpp */,
+				8D9D8C46171C2CA80018C8BD /* LogicBuildCommand.h */,
+				8D9D8C47171C2CA80018C8BD /* LogicBuilding.cpp */,
+				8D9D8C48171C2CA80018C8BD /* LogicBuilding.h */,
+				8D9D8C49171C2CA80018C8BD /* LogicCharacter.cpp */,
+				8D9D8C4A171C2CA80018C8BD /* LogicCharacter.h */,
+				8D9D8C4B171C2CA80018C8BD /* LogicCombatComponent.cpp */,
+				8D9D8C4C171C2CA80018C8BD /* LogicCombatComponent.h */,
+				8D9D8C4D171C2CA80018C8BD /* LogicCommandManager.cpp */,
+				8D9D8C4E171C2CA80018C8BD /* LogicCommandManager.h */,
+				8D9D8C4F171C2CA80018C8BD /* LogicComponent.cpp */,
+				8D9D8C50171C2CA80018C8BD /* LogicComponent.h */,
+				8D9D8C51171C2CA80018C8BD /* LogicFinishNowCommand.cpp */,
+				8D9D8C52171C2CA80018C8BD /* LogicFinishNowCommand.h */,
+				8D9D8C53171C2CA80018C8BD /* LogicFloat2.h */,
+				8D9D8C54171C2CA80018C8BD /* LogicGameObject.cpp */,
+				8D9D8C55171C2CA80018C8BD /* LogicGameObject.h */,
+				8D9D8C56171C2CA80018C8BD /* LogicHitpointComponent.cpp */,
+				8D9D8C57171C2CA80018C8BD /* LogicHitpointComponent.h */,
+				8D9D8C58171C2CA80018C8BD /* LogicInitializer.cpp */,
+				8D9D8C59171C2CA80018C8BD /* LogicInitializer.h */,
+				8D9D8C5A171C2CA80018C8BD /* LogicLine2.h */,
+				8D9D8C5B171C2CA80018C8BD /* LogicMemoryLeckDetector.cpp */,
+				8D9D8C5C171C2CA80018C8BD /* LogicMemoryLeckDetector.h */,
+				8D9D8C5D171C2CA80018C8BD /* LogicMessage.h */,
+				8D9D8C5E171C2CA80018C8BD /* LogicMessageDefinition.h */,
+				8D9D8C5F171C2CA80018C8BD /* LogicMessageDispatcher.cpp */,
+				8D9D8C60171C2CA80018C8BD /* LogicMessageDispatcher.h */,
+				8D9D8C61171C2CA80018C8BD /* LogicMessagePort.cpp */,
+				8D9D8C62171C2CA80018C8BD /* LogicMessagePort.h */,
+				8D9D8C63171C2CA80018C8BD /* LogicMovementComponent.cpp */,
+				8D9D8C64171C2CA80018C8BD /* LogicMovementComponent.h */,
+				8D9D8C65171C2CA80018C8BD /* LogicPath.cpp */,
+				8D9D8C66171C2CA80018C8BD /* LogicPath.h */,
+				8D9D8C67171C2CA80018C8BD /* LogicPathFinder.cpp */,
+				8D9D8C68171C2CA80018C8BD /* LogicPathFinder.h */,
+				8D9D8C69171C2CA80018C8BD /* LogicResProductionComponent.cpp */,
+				8D9D8C6A171C2CA80018C8BD /* LogicResProductionComponent.h */,
+				8D9D8C6B171C2CA80018C8BD /* LogicResStorageComponent.cpp */,
+				8D9D8C6C171C2CA80018C8BD /* LogicResStorageComponent.h */,
+				8D9D8C6D171C2CA80018C8BD /* LogicSkill.cpp */,
+				8D9D8C6E171C2CA80018C8BD /* LogicSkill.h */,
+				8D9D8C6F171C2CA80018C8BD /* LogicSkillManager.cpp */,
+				8D9D8C70171C2CA80018C8BD /* LogicSkillManager.h */,
+				8D9D8C71171C2CA80018C8BD /* LogicTickManager.cpp */,
+				8D9D8C72171C2CA80018C8BD /* LogicTickManager.h */,
+				8D9D8C73171C2CA80018C8BD /* LogicTimer.cpp */,
+				8D9D8C74171C2CA80018C8BD /* LogicTimer.h */,
+				8D9D8C75171C2CA80018C8BD /* LogicTrainingUnitCommand.cpp */,
+				8D9D8C76171C2CA80018C8BD /* LogicTrainingUnitCommand.h */,
+				8D9D8C77171C2CA80018C8BD /* LogicUnitProductionComponent.cpp */,
+				8D9D8C78171C2CA80018C8BD /* LogicUnitProductionComponent.h */,
+				8D9D8C79171C2CA80018C8BD /* LogicUnitStorageComponent.cpp */,
+				8D9D8C7A171C2CA80018C8BD /* LogicUnitStorageComponent.h */,
+				8D9D8C7B171C2CA80018C8BD /* LogicUnitUpgradeCommand.cpp */,
+				8D9D8C7C171C2CA80018C8BD /* LogicUnitUpgradeCommand.h */,
+				8D9D8C7D171C2CA80018C8BD /* LogicUnitUpgradeComponent.cpp */,
+				8D9D8C7E171C2CA80018C8BD /* LogicUnitUpgradeComponent.h */,
+				8D9D8C7F171C2CA80018C8BD /* LogicUtilityFunctions.cpp */,
+				8D9D8C80171C2CA80018C8BD /* LogicUtilityFunctions.h */,
+				8D9D8C81171C2CA80018C8BD /* LogicVillage.cpp */,
+				8D9D8C82171C2CA80018C8BD /* LogicVillage.h */,
+				8D9D8C83171C2CA80018C8BD /* LogicWorkerManager.cpp */,
+				8D9D8C84171C2CA80018C8BD /* LogicWorkerManager.h */,
+				8D9D8C86171C2CA80018C8BD /* MemoryAllocator.h */,
+				8D9D8C87171C2CA80018C8BD /* TimeSystem.cpp */,
+				8D9D8C88171C2CA80018C8BD /* TimeSystem.h */,
+				8D9D8C89171C2CA80018C8BD /* XMLParser.cpp */,
+				8D9D8C8A171C2CA80018C8BD /* XMLParser.h */,
+			);
+			name = GameLogic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D9D8C12171C1AF50018C8BD /* Robot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D9D8C1C171C1AF50018C8BD /* Build configuration list for PBXNativeTarget "Robot" */;
+			buildPhases = (
+				8D9D8C0F171C1AF50018C8BD /* Sources */,
+				8D9D8C10171C1AF50018C8BD /* Frameworks */,
+				8D9D8C11171C1AF50018C8BD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Robot;
+			productName = Robot;
+			productReference = 8D9D8C13171C1AF50018C8BD /* Robot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D9D8C0B171C1AF50018C8BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = PU;
+			};
+			buildConfigurationList = 8D9D8C0E171C1AF50018C8BD /* Build configuration list for PBXProject "Robot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8D9D8C0A171C1AF50018C8BD;
+			productRefGroup = 8D9D8C14171C1AF50018C8BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D9D8C12171C1AF50018C8BD /* Robot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D9D8C0F171C1AF50018C8BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D9D8C17171C1AF50018C8BD /* main.cpp in Sources */,
+				8D9D8C23171C1B430018C8BD /* msg.pb.cc in Sources */,
+				8D9D8C34171C26C30018C8BD /* CConnectionMgr.cpp in Sources */,
+				8D9D8C35171C26C30018C8BD /* CRobotDispacher.cpp in Sources */,
+				8D9D8C8B171C2CA80018C8BD /* ConfigManager.cpp in Sources */,
+				8D9D8C8C171C2CA80018C8BD /* LogicBattle.cpp in Sources */,
+				8D9D8C8D171C2CA80018C8BD /* LogicBuildCommand.cpp in Sources */,
+				D39A66691869582300FEA3FE /* CVillageCheck.cpp in Sources */,
+				8D9D8C8E171C2CA80018C8BD /* LogicBuilding.cpp in Sources */,
+				8D9D8C8F171C2CA80018C8BD /* LogicCharacter.cpp in Sources */,
+				8D9D8C90171C2CA80018C8BD /* LogicCombatComponent.cpp in Sources */,
+				8D9D8C91171C2CA80018C8BD /* LogicCommandManager.cpp in Sources */,
+				8D9D8C92171C2CA80018C8BD /* LogicComponent.cpp in Sources */,
+				8D9D8C93171C2CA80018C8BD /* LogicFinishNowCommand.cpp in Sources */,
+				8D9D8C94171C2CA80018C8BD /* LogicGameObject.cpp in Sources */,
+				8D9D8C95171C2CA80018C8BD /* LogicHitpointComponent.cpp in Sources */,
+				8D9D8C96171C2CA80018C8BD /* LogicInitializer.cpp in Sources */,
+				8D9D8C97171C2CA80018C8BD /* LogicMemoryLeckDetector.cpp in Sources */,
+				8D9D8C98171C2CA80018C8BD /* LogicMessageDispatcher.cpp in Sources */,
+				8D9D8C99171C2CA80018C8BD /* LogicMessagePort.cpp in Sources */,
+				8D9D8C9A171C2CA80018C8BD /* LogicMovementComponent.cpp in Sources */,
+				8D9D8C9B171C2CA80018C8BD /* LogicPath.cpp in Sources */,
+				8D9D8C9C171C2CA80018C8BD /* LogicPathFinder.cpp in Sources */,
+				9D0FB7BB183468D7002844AF /* LogicSpellStorageCpmponent.cpp in Sources */,
+				9D0FB7BC183468D7002844AF /* LogicTrainingSpellCommand.cpp in Sources */,
+				8D9D8C9D171C2CA80018C8BD /* LogicResProductionComponent.cpp in Sources */,
+				8D9D8C9E171C2CA80018C8BD /* LogicResStorageComponent.cpp in Sources */,
+				8D9D8C9F171C2CA80018C8BD /* LogicSkill.cpp in Sources */,
+				8D9D8CA0171C2CA80018C8BD /* LogicSkillManager.cpp in Sources */,
+				8D9D8CA1171C2CA80018C8BD /* LogicTickManager.cpp in Sources */,
+				8D9D8CA2171C2CA80018C8BD /* LogicTimer.cpp in Sources */,
+				8D9D8CA3171C2CA80018C8BD /* LogicTrainingUnitCommand.cpp in Sources */,
+				8D9D8CA4171C2CA80018C8BD /* LogicUnitProductionComponent.cpp in Sources */,
+				8D9D8CA5171C2CA80018C8BD /* LogicUnitStorageComponent.cpp in Sources */,
+				8D9D8CA6171C2CA80018C8BD /* LogicUnitUpgradeCommand.cpp in Sources */,
+				8D9D8CA7171C2CA80018C8BD /* LogicUnitUpgradeComponent.cpp in Sources */,
+				8D9D8CA8171C2CA80018C8BD /* LogicUtilityFunctions.cpp in Sources */,
+				8D9D8CA9171C2CA80018C8BD /* LogicVillage.cpp in Sources */,
+				8D9D8CAA171C2CA80018C8BD /* LogicWorkerManager.cpp in Sources */,
+				8D9D8CAC171C2CA80018C8BD /* TimeSystem.cpp in Sources */,
+				8D9D8CAD171C2CA80018C8BD /* XMLParser.cpp in Sources */,
+				8D077585171CE6C000947B8D /* CRobot.cpp in Sources */,
+				8D00013F171E34F6008FB4D0 /* LogicAvatar.cpp in Sources */,
+				8D1079EC171E8CBE00580560 /* LogicClanComponent.cpp in Sources */,
+				8D0F7DC9171EC5EB0066B8E5 /* RUserData.cpp in Sources */,
+				8D06C00F171F9B2500AEA9B5 /* CRBuilding.cpp in Sources */,
+				8D939C431775480B0090EA32 /* LogicBuff.cpp in Sources */,
+				8D939C441775480B0090EA32 /* LogicHeroSummonComponent.cpp in Sources */,
+				8D939C451775480B0090EA32 /* LogicHeroUpgradeCommand.cpp in Sources */,
+				8D348D0317DF056300E9F66B /* LogicBuildingUpgradeComponent.cpp in Sources */,
+				8D96FB30181F60460056C4B7 /* LogicSpellProductionComponent.cpp in Sources */,
+				8D96FB32181F60460056C4B7 /* LogicSpellUpgradeCommand.cpp in Sources */,
+				8D96FB33181F60460056C4B7 /* LogicSpellUpgradeComponent.cpp in Sources */,
+				8D96FB35181F60460056C4B7 /* LogSpellSkillComponent.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D9D8C1A171C1AF50018C8BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8D9D8C1B171C1AF50018C8BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8D9D8C1D171C1AF50018C8BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(EFFECTIVE_PLATFORM_NAME)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../../engine/src/**",
+					../../../rpc/proto,
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\\\"$(SRCROOT)/../../../engine/src/Network/build/Debug\\\"",
+					"\\\"$(SRCROOT)/../../../engine/src/Network/libevent-1.4.14b-stable/build/Debug\\\"",
+					"\\\"$(SRCROOT)/../../../engine/src/Common/build/Debug\\\"",
+					/Users/ouifugawa/develop/trunk/bin,
+				);
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = Robot;
+				SDKROOT = macosx10.8;
+				SYMROOT = ../../../bin;
+			};
+			name = Debug;
+		};
+		8D9D8C1E171C1AF50018C8BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../../engine/src/**",
+					../../../rpc/proto,
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\\\"$(SRCROOT)/../../../engine/src/Network/build/Debug\\\"",
+					"\\\"$(SRCROOT)/../../../engine/src/Network/libevent-1.4.14b-stable/build/Debug\\\"",
+					"\\\"$(SRCROOT)/../../../engine/src/Common/build/Debug\\\"",
+					/Users/ouifugawa/develop/trunk/bin,
+				);
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Robot;
+				SDKROOT = macosx10.8;
+				SYMROOT = ../../../bin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D9D8C0E171C1AF50018C8BD /* Build configuration list for PBXProject "Robot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D9D8C1A171C1AF50018C8BD /* Debug */,
+				8D9D8C1B171C1AF50018C8BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D9D8C1C171C1AF50018C8BD /* Build configuration list for PBXNativeTarget "Robot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D9D8C1D171C1AF50018C8BD /* Debug */,
+				8D9D8C1E171C1AF50018C8BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D9D8C0B171C1AF50018C8BD /* Project object */;
+}

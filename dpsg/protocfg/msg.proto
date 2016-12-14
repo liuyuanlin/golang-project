@@ -1,0 +1,1589 @@
+package rpc;
+
+message Rpc{
+	repeated Request request = 1;
+}
+
+message Request{
+	required string method = 1;
+	optional bytes serialized_request = 2;
+}
+
+message Msg{
+	optional string code = 1;
+	optional string text = 2;
+}
+
+message SyncError{
+	optional string text = 1;
+}
+
+message RpcErrorResponse{
+	required string method = 1;
+	required string text = 2;
+}
+
+message LoginCnsInfo{
+	required string cnsIp = 1;
+	required string gsInfo = 2;
+}
+
+message LoginChatServerInfo{
+	required string authKey = 1;
+}
+
+message WaitLogin{
+	required uint32 time = 1;
+}
+
+enum GameLocation{
+	InvaildChannel = 0;
+    TaiWan = 1;
+	GameTest = 2;
+    Robot = 3;
+    Vietnam = 4;
+    English = 5;
+    Korea = 6;
+    Tencent = 7;
+}
+
+enum ThirdPartyType{
+    None = 0;
+    GameCenter = 1;
+    GooglePlus = 2;
+}
+
+enum IMType{
+    QcTest = 0;
+    QQ = 1;
+    Weixin = 2;
+}
+
+message Login{
+	optional string uid = 1;
+	required string gatekey = 2;
+    optional GameLocation channelid = 3;
+    optional uint32 platformType = 4;
+    optional IMType imType = 5;
+    optional string openid = 6;
+	optional string openkey = 7;
+	optional string pay_token = 8;
+	optional string pf = 9;
+	optional string pfkey = 10;
+}
+
+message LoginResult{
+  enum Result {
+    OK = 0;
+    NOTEXIST = 1;
+    SERVERERROR = 2;
+    ISONFIRE = 3;
+    USERNOTFOUND = 4;
+	GATEKEYERROR = 5;
+	TX_AUTH_FAILED = 6;
+  }
+  required Result result = 1 [default = OK];
+  required uint32 server_time = 2;
+  optional string errmsg = 3;
+}
+
+
+enum CharacterType{
+	Barbarian = 1;
+	Archer = 2;
+	Goblin = 3;
+	Giant = 4;
+	WallBreaker = 5;
+	Balloon = 6;
+	Wizard = 7;
+	Healer = 8;
+	Dragon = 9;
+	PEKKA = 10;
+    Yuanfang = 11;
+    Lvbu = 12;
+    Diaochan = 13;
+    Guanyu = 14;
+    Yuanxiuqi = 15;
+}
+
+enum SpellType{
+	LighningStorm = 1;
+	HealingWave = 2;
+	Haste = 3;
+	Jump = 4;
+	Xmas = 5;
+}
+
+message Spell{
+	required SpellType type = 1;
+	required uint32 count = 2;
+	optional uint32 level = 3;
+}
+
+message SpellQueue{
+	required Spell spell = 1;
+	required uint32 start_time = 2;
+}
+
+message Character{
+	required CharacterType type = 1;
+	required uint32 count = 2;
+	optional uint32 level = 3;
+}
+
+message Hero{
+	required Character character = 1;
+    optional uint32 upgradetime = 2;
+}
+
+message CharacterQueue{
+	required Character character = 1;
+	required uint32 start_time = 2;
+}
+
+message Ping{
+	
+}
+
+message PingResult{
+	required uint32 server_time = 1;
+}
+
+message BuildingId{
+	enum IdType {
+		Center = 1;
+		Wall = 2;
+		GoldStorage = 3;
+		Barrack = 4;
+		Laboratory = 5;
+		Farm = 6;
+		FoodStorage = 7;
+		TroopHousing = 8;
+		Worker = 9;
+		GoldMine = 10;
+        ArcherTower = 11;
+        Cannon = 12;
+        WizardTower = 13;
+        AirDefense = 14;
+        Mortar = 15;
+        TeslaTower = 16;
+        XBow = 17;
+        AllianceCastle = 18;
+        SpellForge = 19;
+        Bomb = 21;
+        GiantBomb = 22;
+        Eject = 23;
+        GeneralHouse = 24;
+        Deco1 = 25;
+        Deco2 = 26;
+        Deco3 = 27;
+        Deco4 = 28;
+        Deco5 = 29;
+        Deco6 = 30;
+        Deco7 = 31;
+        Deco8 = 32;
+        Deco9 = 33;
+        Deco10 = 34;
+        Deco11 = 35;
+        Deco12 = 36;
+        Deco13 = 37;
+        Deco14 = 38;
+        Deco15 = 39;
+        Deco16 = 40;
+        Deco17 = 41;
+        Deco18 = 42;
+        Deco19 = 43;
+        Deco20 = 44;
+        Deco21 = 45;
+        Deco22 = 46;
+        Deco23 = 47;
+        Deco24 = 48;
+        Barrier1 = 60;
+        Barrier2 = 61;
+        Barrier3 = 62;
+        Barrier4 = 63;
+        Barrier5 = 64;
+        Barrier6 = 65;
+        End = 66;
+	}
+	required IdType type = 1;
+	required uint32 index = 2;
+}
+
+message MoveTo{
+	required BuildingId id = 1;
+	required Position p = 2;
+}
+
+message MoveToBatch{
+	repeated MoveTo moves = 1;
+}
+
+message CreateTo{
+	required BuildingId id = 1;
+	required Position p = 2;
+    optional uint32 level = 3;
+}
+
+message SellBuilding{
+    required BuildingId id = 1;
+}
+
+message Training{
+	required uint32 index = 1;
+	required Character character = 2;
+}
+
+message CancelTraining{
+	required uint32 index = 1;
+	required Character character = 2;
+}
+
+message Shield{
+	required uint32 start_time = 1;
+	required uint32 total_time = 2;
+}
+
+enum ShopItemType {
+	ShopItem_Gold = 1;
+	ShopItem_Food = 2;
+	ShopItem_Gem = 3;
+	ShopItem_Wuhun = 4;
+	ShopItem_OneDayShield = 5;
+	ShopItem_TwoDayShield = 6;
+	ShopItem_OneWeekShield = 7;
+	ShopItem_Drill1 = 8;
+	ShopItem_Drill12 = 9;
+	ShopItem_Drill150 = 10;
+    ShopItem_FriendDrill1 = 11;
+	ShopItem_FriendDrill12 = 12;
+	ShopItem_FriendDrill150 = 13;
+    ShopItem_BattleAccelerate = 14;
+    ShopItem_TiLi = 15;
+}
+	
+message ShopInfo{
+	required ShopItemType type = 1;
+	optional uint32 cd_time = 2;
+}
+
+message TryBuy{
+	required ShopItemType type = 1;
+	optional uint32 num = 2;
+}
+
+
+message GooglePay{
+    required GameLocation location = 1;
+    required string data = 2;
+    required string signature = 3;
+}
+
+enum MimigigiPayType{
+    Tel = 1;
+    Gash = 2;
+}
+
+message MimigigiPay{
+    required bool result = 1;
+    required uint32 price = 2;
+    required string uid = 3;
+    required string token = 4;
+    required string timeStamp = 5;
+    required string orderId = 6;
+    required MimigigiPayType payType = 7;
+}
+
+message IosPay{
+    required GameLocation location = 1;
+    required string receipt = 2;
+}
+
+message IosPayVietnam{
+    required string userId = 1;
+    required string userName = 2;
+    required string cpid = 3;
+    required string productId = 4;
+    required string money = 5;
+    required string transactionId = 6;
+    required string receipt = 7;
+}
+
+message Task{
+	required string name = 1;
+	required uint32 progress = 2;
+	optional uint32 finished_time = 3;
+}
+
+message UpdateTaskInfo{
+	required string name = 1;
+	required uint32 progress = 2;
+}
+
+message TryGetTaskReward{
+	required string name = 1;
+}
+
+message Player{
+	enum UseType {
+		Clan = 1;
+		Rank = 2;
+	}
+	enum ClanPower {
+		None = 0;
+		Leader = 1;
+		Elder = 2;
+		Member = 3;
+	}
+	required UseType type = 1 [default = Clan];
+	required string name = 2;
+	required string uid = 3;
+	required uint32 trophy = 4;
+	required uint32 level = 5;
+	optional uint32 exp = 6;
+	optional ClanPower power = 7 [default = Member];
+	optional string clan_name = 8;
+	optional uint32 clan_symbol = 9;
+	optional uint32 oldrank = 10;
+	optional uint32 rank = 11;
+	optional string gender = 12;
+	optional string headurl = 13;
+	optional uint32 donate_num = 20;
+}
+
+message PlayerBaseInfo{
+    required string uid = 1;
+    required uint64 village_id = 2;
+    required string name = 3;
+    required uint32 trophy = 4;
+    required uint32 level = 5;
+    required GameLocation gamelocation = 6;
+    optional uint32 exp = 7;
+    optional Player.ClanPower power = 8 [default = Member];
+    optional string clan = 9;
+    optional uint32 clan_symbol = 10;
+    optional uint32 donate_num = 11;
+    optional string gender = 12;
+    optional string headurl = 13;
+}
+
+message PlayerExtraInfo{
+    required uint32 wuhun = 1;
+    required uint32 diamonds = 2;
+    optional Shield shield = 3;
+    repeated ShopInfo shop = 4;
+    repeated uint64 d_log_id = 5;
+    repeated uint64 a_log_id = 6;
+    repeated uint64 d_rep_id = 7;
+    repeated uint64 a_rep_id = 8;
+    repeated Task tasks = 9;
+    optional uint32 drill_times = 10;
+    optional uint32 obstacle_time = 11;
+    optional bool is_userguide_finish = 12;
+    optional ShareInfo shareinfo = 13;
+    optional LandedRewardInfo landedrewardinfo = 14;
+    optional uint32 friend_drill_times = 15;
+    optional PlayerTTTInfo selftttinfo = 16;
+    optional PlayerTTTMutliples selftttmultiples = 17;
+    optional TTTRankPlayersInfo tttrankplayerinfo = 18;
+    optional uint32 battle_accelerate_times = 19;
+    optional uint32 tili = 20;
+    optional int64 onQuitTime = 21;
+    optional uint32 guide_finished_step = 22;
+}
+
+message PlayerInfo{
+	required PlayerBaseInfo base = 1;
+	required PlayerExtraInfo extra = 2;
+}
+
+message UpdatePlayerInfo{
+	optional string name = 1;
+	optional uint32 gold = 2;
+	optional uint32 food = 3;
+	optional uint32 wuhun = 4;
+	optional uint32 diamonds = 5;
+	optional uint32 trophy = 6;
+	optional string clan = 7;
+	optional uint32 clan_symbol = 8;
+	optional Shield shield = 9;
+	optional uint32 level = 10;
+	optional uint32 exp = 11;
+	optional ShopInfo shop = 12;
+	optional uint32 drill_times = 13;
+       optional string googlePayNonce = 14;
+       optional uint32 friend_drill_times = 15;
+       optional bool isTTTwined = 16;
+       optional bool  isTTTStart = 17;
+       optional bool  isTTTOver = 18;
+       repeated TTTBuff tttbuffs = 19;
+       optional uint32 battle_accelerate_times = 20;
+       optional uint32 tili = 21;
+}
+
+message FriendsExeciseInfo{
+    repeated uint64 f_log_id = 1;
+    repeated uint64 f_rep_id = 2;
+}
+
+message Position{
+	required uint32 x = 1;
+	required uint32 y = 2;
+}
+
+message Center{
+	required Position p = 1;
+    required uint32 level = 2;
+    required uint32 hp = 3;
+    required uint32 upgrade_time = 4;
+    required uint32 storage_gold = 5;
+    required uint32 storage_food = 6;
+}
+
+message Wall{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+
+message GoldStorage{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+    required uint32 storage_gold = 5;
+}
+
+message Barrack{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	repeated CharacterQueue queue = 5;
+}
+
+message LaboratoryInfo{
+	required CharacterType type = 1;
+	required uint32 level = 2;
+	required uint32 upgrade_time = 3;
+}
+
+message LaboratorySpellInfo{
+	required SpellType type = 1;
+	required uint32 level = 2;
+	required uint32 upgrade_time = 3;
+}
+
+message Laboratory{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	repeated LaboratoryInfo info = 5;
+	repeated LaboratorySpellInfo spell_info = 6;
+}
+
+message Farm{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	required uint32 last_op_time = 5;
+    required uint32 res_count = 6;
+}
+
+message FoodStorage{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+    required uint32 storage_food = 5;
+}
+
+message TroopHousing{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	repeated Character character = 5;
+}
+
+message Worker{
+    required uint32 hp = 1;
+	required Position p = 2;
+}
+
+message GoldMine{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;	
+	required uint32 last_op_time = 5;
+    required uint32 res_count = 6;
+}
+message ArcherTower{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message Cannon{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message WizardTower{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message AirDefense{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message Mortar{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message TeslaTower{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+}
+message XBow{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	optional uint32 AmmoCount = 5;
+	optional uint32 AltAttackRange = 6;
+}
+message AllianceCastle{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	repeated Character characters = 5;
+	optional uint32 donate_time = 6;
+	optional string clan_name = 7;
+	optional uint32 clan_symbol = 8;
+}
+message SpellForge{
+	required uint32 level = 1;
+    required uint32 hp = 2;
+	required Position p = 3;
+	required uint32 upgrade_time = 4;
+	repeated SpellQueue queue = 5;
+	repeated Spell spell = 6;
+}
+message GeneralHouse{
+    required uint32 hp = 1;
+	required Position p = 2;
+    repeated Hero hero = 3;
+    optional CharacterType selectedhero = 4;
+}
+message Deco1{
+	required Position p = 1;
+}
+message Deco2{
+	required Position p = 1;
+}
+message Deco3{
+	required Position p = 1;
+}
+message Deco4{
+	required Position p = 1;
+}
+message Deco5{
+	required Position p = 1;
+}
+message Deco6{
+	required Position p = 1;
+}
+message Deco7{
+	required Position p = 1;
+}
+message Deco8{
+	required Position p = 1;
+}
+message Deco9{
+	required Position p = 1;
+}
+message Deco10{
+	required Position p = 1;
+}
+message Deco11{
+	required Position p = 1;
+}
+message Deco12{
+	required Position p = 1;
+}
+message Deco13{
+	required Position p = 1;
+}
+message Deco14{
+	required Position p = 1;
+}
+message Deco15{
+	required Position p = 1;
+}
+message Deco16{
+	required Position p = 1;
+}
+message Deco17{
+	required Position p = 1;
+}
+message Deco18{
+	required Position p = 1;
+}
+message Deco19{
+	required Position p = 1;
+}
+message Deco20{
+	required Position p = 1;
+}
+message Deco21{
+	required Position p = 1;
+}
+message Deco22{
+	required Position p = 1;
+}
+message Deco23{
+	required Position p = 1;
+}
+message Deco24{
+	required Position p = 1;
+}
+message Bomb{
+    required Position p = 1;
+}
+message GiantBomb{
+    required Position p = 1;
+}
+message Eject{
+    required Position p = 1;
+}
+message Barrier1{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message Barrier2{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message Barrier3{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message Barrier4{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message Barrier5{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message Barrier6{
+	required Position p = 1;
+	required uint32 remove_time = 2;
+	required uint32 gem_num = 3;
+}
+message VillageInfo{
+	required Center center = 1;
+	repeated Wall wall = 2;
+    repeated GoldMine goldmine = 3;
+    repeated Worker worker = 4;
+    repeated TroopHousing troophosing = 5;
+    repeated FoodStorage foodstorage = 6;
+    repeated Farm farm = 7;
+    repeated Laboratory laboratory = 8;
+    repeated Barrack barrack = 9;
+    repeated GoldStorage goldstorage = 10;
+    repeated ArcherTower archertower = 11;
+    repeated Cannon cannon = 12;
+    repeated WizardTower wizardtower = 13;
+    repeated AirDefense airdefense = 14;
+    repeated Mortar mortar = 15;
+    repeated TeslaTower teslatower = 16;
+    repeated XBow xbow = 17;
+    repeated AllianceCastle alliancecastle = 18;
+    repeated SpellForge spellforge = 19;
+    repeated Bomb bomb = 20;
+    repeated GiantBomb giantbomb = 21;
+    repeated Eject eject = 22;
+	repeated GeneralHouse generalhouse = 23;
+    repeated Deco1 deco1 = 24;
+    repeated Deco2 deco2 = 25;
+    repeated Deco3 deco3 = 26;
+    repeated Deco4 deco4 = 27;
+    repeated Deco5 deco5 = 28;
+    repeated Deco6 deco6 = 29;
+    repeated Deco7 deco7 = 30;
+    repeated Deco8 deco8 = 31;
+    repeated Deco9 deco9 = 32;
+    repeated Deco10 deco10 = 33;
+    repeated Deco11 deco11 = 34;
+    repeated Deco12 deco12 = 35;
+    repeated Deco13 deco13 = 36;
+    repeated Deco14 deco14 = 37;
+    repeated Deco15 deco15 = 38;
+	repeated Deco16 deco16 = 39;
+    repeated Deco17 deco17 = 40;
+    repeated Deco18 deco18 = 41;
+    repeated Deco19 deco19 = 42;
+    repeated Deco20 deco20 = 43;
+    repeated Deco21 deco21 = 44;
+    repeated Deco22 deco22 = 45;
+    repeated Deco23 deco23 = 46;
+    repeated Deco24 deco24 = 47;
+    repeated Barrier1 barrier1 = 50;
+    repeated Barrier2 barrier2 = 51;
+    repeated Barrier3 barrier3 = 52;
+    repeated Barrier4 barrier4 = 53;
+    repeated Barrier5 barrier5 = 54;
+    repeated Barrier6 barrier6 = 55;
+}
+
+enum ClanSymbol{
+	SymbolMaxNum = 8;
+}
+
+message ClanInfo{
+	enum ClanType {
+		Any = 1;
+		Invite = 2;
+		Close = 3;
+	}
+	required ClanType type = 1 [default = Any];
+	required string name = 2;
+    required uint32 symbol = 3;
+	required uint32 require = 4;
+	required string describe = 5;
+	optional uint32 oldrank = 6;
+	optional uint32 rank = 7;
+	optional uint32 trophy = 8;
+	optional uint32 members = 9;
+}
+
+enum GetClanType {
+	GetClan_ClanStart = 1;
+	GetClan_ClanMine = 2;
+	GetClan_ClanToJoin = 3;
+	GetClan_ClanMySearch = 4;
+	GetClan_ClanOtherSearch = 5;
+	GetClan_ClanEnd = 6;
+	
+	GetClan_RankStart = 7;
+	GetClan_RankClan = 8;
+	GetClan_RankPlayer = 9;
+	GetClan_RankPlayerVisitClan = 10;
+	GetClan_RankSearch = 11;
+	GetClan_RankEnd = 12;
+}
+
+message Clan{
+	optional GetClanType type = 1;
+	required ClanInfo info = 2;
+	repeated Player players = 3;
+}
+
+message ClanInfos{
+	optional GetClanType type = 1;
+	repeated ClanInfo infos = 2;
+	repeated ClanInfo infos_ex = 3;
+}
+
+message TryGetClan{
+	optional GetClanType type = 1;
+	required string name = 2;
+}
+
+message TryGetClans{
+	optional GetClanType type = 1;
+	optional string key = 2;
+}
+
+message TryJoinClan{
+	optional GetClanType type = 1;
+	required string name = 2;
+}
+
+message TryLeaveClan{
+	optional GetClanType type = 1;
+}
+
+message TryKickPlayer{
+	optional GetClanType type = 1;
+	required string tar_uid = 2;
+}
+
+message TryAppointPlayer{
+	optional GetClanType type = 1;
+	required string tar_uid = 2;
+	required Player.ClanPower power = 3;
+}
+
+message TryVisit{
+	required string uid = 1;
+}
+
+message TryRevenge{
+	required string uid = 1;
+	required uint64 bid = 2;
+}
+
+message TryReplay{
+	required uint64 rid = 1;
+}
+
+message TryFriendExecise{
+	required string uid = 1;
+}
+
+message TryGetRankPlayers{
+}
+
+message RankPlayers{
+	repeated Player rps_top = 1;
+	repeated Player rps_me = 2;
+}
+message TryDrill{
+}
+
+message TryDrillResult{
+	required bool ok = 1;
+}
+
+message TryFriendDrill{
+}
+
+message MatchPlayer{
+	enum Act {
+		VISIT = 0;
+		ATTACK = 1;
+		REVENGE = 2;
+        FRIEND_EXECISE = 3;
+        CHALLENGE_N = 4;
+        CHALLENGE_M = 5;
+	}
+	required Act act = 1 [default = VISIT];
+	required string name = 2;
+	required uint32 trophy = 3;
+	required uint32 level = 4;
+	required VillageInfo v = 5;
+	required uint32 own_gold = 6;
+	required uint32 own_food = 7;
+	required uint32 max_gold = 8;
+	required uint32 max_food = 9;
+	required uint32 own_diamond = 10;
+	required uint32 own_trophy = 11;
+	optional uint32 own_townlevel = 12;
+	optional ClanForce clan_force = 13;
+	repeated Character own_char = 14;
+	repeated Spell own_spell = 15;
+}
+
+message MatchPlayerResult{
+	enum Result {
+		OK = 0;
+		NOTEXIST = 1;
+		SERVERERROR = 2;
+		ISONFIRE = 3;
+		MATCHNOTHING = 4;
+	}
+	required Result result = 1 [default = OK];
+}
+
+message AttackerInfo
+{
+    required uint32 droptime = 1;
+    required CharacterType type = 2;
+	required uint32 level = 3;
+    required Position p = 4;
+}
+
+message SpellInfo
+{
+    required uint32 droptime = 1;
+    required SpellType type = 2;
+	required uint32 level = 3;
+    required Position p = 4;
+}
+
+message ClanForce{
+	required uint32 symbol = 1;
+	repeated Character char = 2;
+}
+
+message ClanForceInfo
+{
+    required uint32 droptime = 1;
+    required ClanForce clan_force = 2;
+    required Position p = 3;
+}
+
+message NotifyBattleEnd
+{
+    required uint32 totaltime = 1;
+}
+
+message UnitDeploy
+{
+    repeated AttackerInfo attackunits = 1;
+    repeated SpellInfo spells = 2;
+    required uint32 totaltime = 3;
+}
+
+message AttackBegin
+{
+	required uint64 playerlid = 1;
+    required VillageInfo v = 2;
+    required uint32 totaltime = 3;
+    required uint32 src_trophy = 4;
+    required uint32 tar_trophy = 5;
+    optional ClanForceInfo clan_force_info = 6;
+	repeated AttackerInfo attackunits = 7;
+    repeated SpellInfo spells = 8;	
+}
+
+message AttackEnd
+{
+	required uint64 playerlid = 1;
+    required VillageInfo v = 2;
+    required uint32 goldstolen = 3;
+    required uint32 foodstolen = 4;
+    required uint32 damagepercent = 5;
+    required uint32 starts = 6;
+    required sint32 trophy = 7;
+    optional uint32 exp = 8;
+    optional uint32 wuhun = 9;
+}
+
+message Stage
+{
+	required uint32 StageId = 1;
+	optional uint32	Stars = 2;
+    optional uint32 CurrentGold = 3;
+    optional uint32 CurrentFood = 4;
+    optional uint32 CurrentDiamond = 5;
+}
+
+message PveStages
+{
+	repeated Stage Stages = 1;
+}
+
+message NotifyPVEBattleStart
+{
+    required uint32 StageId = 1;
+}
+
+message PVEAttackerInfo
+{
+	repeated Character own_char = 12;
+	repeated Spell own_spell = 13;
+}
+
+message NotifyPVEBattleEnd
+{
+    required uint32 totaltime = 1;
+    required uint32 StageId = 2;
+}
+
+message PVEAttackBegin
+{
+    required uint64 playerlid = 1;
+    required uint32 totaltime = 2;
+    required Stage stage = 3;
+    optional ClanForceInfo clan_force_info = 4;
+    repeated AttackerInfo attackunits = 5;
+    repeated SpellInfo spells = 6;
+}
+
+message PVEAttackEnd
+{
+	required uint64 playerid = 1;
+    required Stage  stage = 2;
+    required uint32 goldstolen = 3;
+    required uint32 foodstolen = 4;
+    required uint32 exp = 5;
+}
+
+message BattleLogs
+{
+	enum BattleLogType {
+		Defence = 1;
+		Attack = 2;
+        FriendExecise = 3;
+	}
+	required BattleLogType type = 1;
+	repeated BattleLog log = 2;
+}
+
+message BattleReplay
+{
+	required VillageInfo v = 1;
+	required uint32 totaltime = 2;
+	optional ClanForceInfo clan_force_info = 3;
+	repeated AttackerInfo attackunits = 4;
+    repeated SpellInfo spells = 5;
+}
+
+message UpdateBattleLog
+{
+	required uint64 bid = 1;
+	optional BattleLog.RevengeState revstate = 2;
+}
+
+message BattleLog
+{
+	enum ReadState {
+		UnRead = 1;
+		Read = 2;
+	}
+	enum RevengeState {
+		UnRevenged = 1;
+		Revenged = 2;
+	}
+	required uint64 bid = 1;
+	required string pid = 2;
+	required string name = 3;
+	required uint32 level = 4;
+	required string clan_name = 5;
+	required uint32 clan_symbol = 6;
+	required uint32 trophy = 7;
+	required uint32 time = 8;
+	required uint32 goldstolen = 9;
+    required uint32 foodstolen = 10;
+	required sint32 gaintrophy = 11;
+    required uint32 dmgpercent = 12;
+    required uint32 starts = 13;
+	required ReadState state = 14 [default = UnRead];
+	required RevengeState revstate = 15 [default = UnRevenged];
+	repeated Character chars = 16;
+	repeated Spell spells = 17;
+	optional ClanForce clan_force = 18;
+	optional uint64 rid = 19;
+	optional uint32 wuhun = 20;
+}
+
+message C2SChatP2P
+{
+	required string ToPlayerId = 1;
+	required string ChatContent = 2;
+}
+
+message C2SChatAlliance
+{
+	required string ChatContent = 1;
+}
+
+message C2SChatWorld
+{
+	required string ChatContent = 1;
+}
+
+message S2CChatP2P
+{
+	required string FromPlayerId = 1;
+	required string FromPlayerName = 2;
+	required uint32 FromPlayerLevel = 3;
+	required string ChatContent = 4;
+}
+
+message ClanChatMessage
+{
+	enum MsgType {
+		Chat = 1;
+		Create = 2;
+		Join = 3;
+		Leave = 4;
+		Kick = 5;
+		PromoteLeader = 6;
+		PromoteElder = 7;
+		DemoteElder = 8;
+		DemoteMember = 9;
+	}
+	required MsgType type = 1 [default = Chat];
+	required string uid = 2;
+	required string name = 3;
+	required uint32 level = 4;
+	required Player.ClanPower power = 5;
+	required int64 time = 6;
+	repeated string args = 7;
+}
+
+message ClanMessage {
+	required ClanChatMessage.MsgType type = 1;
+}
+
+message S2CChatWorld
+{
+    required string FromPlayerId = 1;
+    required string FromPlayerName = 2;
+    required uint32 FromPlayerLevel = 3;
+    optional string AllianceName = 4;
+    optional uint32 AllianceSymbol = 5;
+	required int64 ChatTime = 6;
+    required string ChatContent = 7;
+}
+
+message C2SDonate{
+	required string uid = 1;
+	repeated Character characters = 2;
+}
+
+message C2SDonateResult{
+	required string tar_uid = 1;
+	required string src_uid = 2;
+	required uint32 exp = 3;
+	repeated Character characters = 4;
+}
+
+message S2CDonate
+{
+	required string uid = 1;
+	required string name = 2;
+	required uint32 level = 3;
+	required Player.ClanPower power = 4;
+	required uint32 time = 5;
+	required string info = 6;
+	required uint32 used_space = 7;
+	required uint32 total_space = 8;
+}
+
+message S2CDonateInfo
+{
+	required S2CDonate donate_info = 1;
+	repeated C2SDonateResult donate_results = 2;
+}
+
+message S2CDonateUpdate
+{
+	required string uid = 1;
+	required string info = 2;
+	required uint32 used_space = 3;
+	required uint32 total_space = 4;
+	optional C2SDonateResult donate_result = 5;
+}
+
+message PlayerDonateInfo{
+	required string uid = 1;
+	repeated Character characters = 2;
+}
+
+message DonateInfo{
+	required string info = 1;
+	required uint32 used_space = 2;
+	required uint32 total_space = 3;
+	repeated Character characters = 4;
+	repeated PlayerDonateInfo pinfo = 5;
+}
+
+message NotifyDonateGet{
+	required string name = 1;
+	required Character character = 2;
+}
+
+message NotifyDonateOff{
+	required Character character = 1;
+}
+
+message BeginChat
+{
+	required string AuthKey = 1;
+}
+
+message HeroChoose
+{
+    required uint32 idx = 1;
+    required CharacterType type = 2;
+}
+message PayRequest
+{
+    required string itemname = 1;
+    required uint32 channelid = 2;
+}
+message PayResponse
+{
+    required string orderstr = 1;
+    required uint32 channelid = 2;
+}
+message NotifyRecharge
+{
+    required uint32 gem_num = 1;
+}
+message UserGuideFinish
+{
+}
+
+enum MailAttach {
+    Food = 1;
+    Gold = 2;
+    Gem = 3;
+    Wuhun = 4;
+    Tili = 5;
+    NorEnd = 6;
+    CharBegin = 50;
+}
+
+message SysMail
+{
+	required uint64 version = 1;
+	required string title = 2;
+	required string content = 3;
+	required uint32 sendtime = 4;
+	optional string attach = 5;
+	optional uint32 overduetime = 6;
+	optional GameLocation channelid = 7;
+}
+
+message PlayerMail
+{
+	enum MailType {
+		System = 1;
+		Normal = 2;
+	}
+	required string    mailid = 1;
+	required MailType  mailtype = 2;
+	required string    fromname = 3;
+    optional string    fromuid = 4;
+    optional uint32    fromlevel = 5;
+    optional string    fromclan = 6;
+    optional uint32    fromclansymbol = 7;
+	required string    title = 8;
+	required string    content = 9;
+	required uint32    sendtime = 10;
+	optional string    attach = 11;
+    required bool      bread = 12 [default = false];
+}
+
+message PlayerMailInfo
+{
+	required uint64 sysmail_version = 1 [default = 0];
+	repeated PlayerMail maillist = 2;
+}
+
+message ClientGetMailAttach
+{
+    required string    mailid = 1;
+}
+
+message ClientGetMailAttachResult
+{
+    required string    mailid = 1;
+}
+
+message ClientDeleteMail
+{
+    required string    mailid = 1;
+}
+
+message ClientDeleteMailResult
+{
+    required string    mailid = 1;
+}
+
+message ClientSendMail
+{
+	required string    toplayer = 1;
+	required string    title = 2;
+	required string    content = 3;
+	optional string    attach = 4;
+}
+
+message ClientReadMail
+{
+    required string    mailid = 1;
+}
+
+message C2SGetFriendsList
+{    
+}
+
+message FriendsList
+{
+    repeated Player friends = 1;
+}
+
+message C2SAddFriend
+{
+    optional string id = 1;
+    optional string name = 2;
+}
+
+message C2SDelFriend
+{
+    required string id = 1;
+}
+
+message S2CAddFriendResult
+{
+    enum ReType {
+        OK = 0;
+        RepeatAdd = 1;
+        FindntPlayer = 2;
+        HasFull = 3;
+    }
+    required ReType rst = 1 [default = OK];
+    optional Player friend = 2; 
+}
+
+message S2CDelFriendResult
+{
+    enum ReType {
+        OK = 0;
+        FindntFried = 1;        
+    }
+    required ReType rst = 1 [default = OK];
+    required string id = 2; 
+}
+
+message FriendsIdList
+{
+    repeated string friends = 1;    
+}
+
+message Notice
+{
+    required string content = 1;
+}
+
+message ShareInfo
+{
+    required uint32 step = 1;
+    required int64 sharetime = 2;
+}
+
+message ShareFinish
+{
+    required uint32 step = 1;
+}
+message LandedRewardInfo
+{
+    required uint32 LandCount = 1;
+    required int64 lastLandedTime = 2;
+    optional int64 lastEndGameTime = 3;
+    required bool  needGetReward = 4 [default = false];
+}
+
+message LandedReceiveAward
+{
+    required uint32 currentCount = 1;
+}
+
+message PlayerTTTInfo
+{
+    required uint32 fightbegintime = 1;
+    required uint32 fightdaytimes = 2;
+    required uint32 curcheckpoint = 3;
+    required uint32 changetimes = 4;
+    optional string matchedplayerid = 5;
+    repeated Character characters = 6;
+    repeated Spell spells = 7;
+    optional bool  isTTTOver = 8 ;
+    optional bool  isStart = 9 ;
+    optional bool  isTTTEndEveryCheckpoint = 10 ;
+    repeated TTTBuff tttbuffs = 11;
+    repeated Character Startcharacters = 12;
+    repeated Spell Startspells = 13;
+    repeated TTTBuff Starttttbuffs = 14;
+    optional uint32 reLiveCount = 15;
+}
+message TTTBuff{
+    enum TTTBuffType {
+	TTTBuffAddArmy = 1;
+	TTTBuffAddBattleTime = 2;
+    	TTTBuffJumpCheckPoint = 3;
+	TTTBuffDetectEye = 4;
+	TTTBuffExpandInitilialCount = 5;
+	TTTBuffExpandAlifeCount = 6;
+    	TTTBuffAddSpell = 7;        
+    }
+    required TTTBuffType type = 1;
+    optional uint32 count = 2;
+    repeated Character characters = 3;
+    repeated Spell spells = 4;
+    optional uint32 addtimes = 5;
+}
+message PlayerTTTMutliples
+{
+    required uint32 multiple = 1;
+    required uint32 freetimes = 2;
+    required uint32 randomtime = 3;
+    required uint32 curRandtimes = 4;
+}
+
+message TryStartTTT
+{
+    repeated Character characters = 1;
+    required bool isContinueBattle = 2;
+    repeated Spell spells = 3;
+    optional bool  isBreakORReast = 4 ;
+    repeated TTTBuff tttbuffs = 5;
+    optional bool  isRelive = 6 ;
+}
+
+message SynTTTCheckpoint
+{
+    required uint32 curcheckpoint = 1;
+    required uint32 changetimes = 2;
+    repeated Character characters = 3;
+    required VillageInfo v = 4;
+    repeated Spell spells = 5;
+    repeated TTTBuff tttbuffs = 6;
+    optional bool isBreakORReast = 7 ;
+    optional bool isContinueBattle = 8;
+    optional bool  isRelive = 9 ;
+    required uint32 reliveCount = 10;
+}
+
+message TryRandomTTTCharacter
+{
+    required bool free = 1;
+}
+message TryMatchNextCheckpointPlayer{
+}
+message TryGetTTTRankPlayers{
+}
+
+message TTTRankPlayers{
+    repeated TTTPlayer rps_top = 1;
+}
+message TTTRankPlayersInfo{
+    required uint32 curTTTScore = 1;
+    required uint32 curMostTTTScore = 2;
+    required uint32 lastFreshTime = 3;
+}
+message TTTPlayer{
+	enum UseType {
+		Clan = 1;
+		Rank = 2;
+	}
+	required UseType type = 1 [default = Clan];
+	required string name = 2;
+	required string uid = 3;
+	required uint32 level = 4;
+       	required uint32 trophy = 5;
+	optional string clan_name = 6;
+	optional uint32 clan_symbol = 7;
+       optional uint32 tttSCoreQuery = 8;
+       optional uint32 ranknumberQuery = 9;
+}
+message TryGetScoreAndRank{
+}
+
+message TTTScoreAndRank{
+    required uint32 mostScore = 1;
+    required uint32 tttScoreRank = 2;
+}
+
+message Bind3rdAccount{
+    required ThirdPartyType tptype = 1;
+    required string uid = 2;
+    required string account = 3;
+}
+
+message Bind3RDAccountResult{
+    enum RstType {
+        BindOk = 1;
+        ExistAccount = 2;        
+    }
+    required RstType rst = 1;
+}
+
+message Query3RDAccount{
+    required ThirdPartyType tptype = 1;
+    required string account = 3;    
+}
+
+message Qery3RDAccountResult{
+    required bool rst = 1;
+}
+
+message CommString{
+    required string str = 1;    
+}
+
+enum ChallengeType {
+    Normal = 1;
+    Money = 2;
+}
+
+message NormalChallengeInfo{
+    enum State {
+        None = 1;
+        Free = 2;
+        Challenging = 3;
+    }
+    required uint32 level = 1;
+    required uint32 index = 2;
+    required State state = 3;
+    required uint32 challengetimes = 4;
+    required uint32 starttime = 5;
+    required uint32 score = 6;
+    optional string hostid = 7;
+    optional string hostname = 8;
+    optional string hostclan_name = 9;
+    optional uint32 hostclan_symbol = 10;
+    optional string challengeid = 11;
+}
+
+message MoneyChallengeInfo{
+    required NormalChallengeInfo base = 1;
+    required uint32 money = 2;
+}
+
+message NormalChallenges{
+    repeated NormalChallengeInfo challenges = 1;
+}
+
+message MoneyChallenges{
+    repeated MoneyChallengeInfo challenges = 1;
+}
+
+message GetNormalChallengeList{
+}
+
+message GetMoneylChallengeList{
+}
+
+message BeginNormalChallenge{
+	required uint32 level = 1;
+	required uint32 index = 2;
+}
+
+message BeginMoneyChallenge{
+	required uint32 level = 1;
+	required uint32 index = 2;
+}
+
+message PlayerChallengeInfo{
+	required uint32 score = 1;
+	required uint32 salarytime = 2;
+}
+
+message PlayerGiveGift{
+	required string uid = 1;
+}
+
+message GuideFinishedStep{
+	required uint32 stepId = 1;
+}
+
+message OnThirdChannelBuyGem {
+    
+}

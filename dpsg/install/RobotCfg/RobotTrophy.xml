@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Node>
+    <config TownHallLevel="1" BaseNumber="0" MaxNumber="0"/>
+    <config TownHallLevel="2" BaseNumber="0" MaxNumber="20"/>
+    <config TownHallLevel="3" BaseNumber="20" MaxNumber="50"/>
+    <config TownHallLevel="4" BaseNumber="50" MaxNumber="100"/>
+    <config TownHallLevel="5" BaseNumber="100" MaxNumber="300"/>
+    <config TownHallLevel="6" BaseNumber="300" MaxNumber="500"/>
+    <config TownHallLevel="7" BaseNumber="500" MaxNumber="700"/>
+    <config TownHallLevel="8" BaseNumber="700" MaxNumber="1000"/>
+    <config TownHallLevel="9" BaseNumber="1000" MaxNumber="1400"/>
+</Node>

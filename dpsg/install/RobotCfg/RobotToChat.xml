@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<Node>
+	<config RobotCount="30" IP="192.168.8.28" Port="9801"/>
+</Node>

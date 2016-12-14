@@ -1,0 +1,17 @@
+2016/04/18 14:41:30 Debug Http Service : 127.0.0.1:5900
+2016/04/18 14:41:30 Gc : HeapSys, HeapAlloc, HeapIdle, HeapReleased 3014656 782016 1490944 1490944
+goroutine 1 [running]:
+runtime/debug.Stack(0x0, 0x0, 0x0)
+	d:/go/src/runtime/debug/stack.go:24 +0x87
+runtime/debug.PrintStack()
+	d:/go/src/runtime/debug/stack.go:16 +0x1f
+logger.Fatal(0xb9fee0, 0x1d, 0xc082029490, 0x1, 0x1)
+	E:/work/DSanguoCODE/trunk/server/src/logger/logger.go:65 +0x6a
+csvcfg.LoadCSVConfig(0xc0821710a0, 0x16, 0x902a60, 0xe52c78)
+	E:/work/DSanguoCODE/trunk/server/src/csvcfg/loader.go:295 +0x2ac3
+connector.loadConfigFiles(0xc0820e56d0, 0xb)
+	E:/work/DSanguoCODE/trunk/server/src/connector/cnserver.go:99 +0xb48
+connector.NewCNServer(0xe54d20, 0xc0820fa2a0)
+	E:/work/DSanguoCODE/trunk/server/src/connector/cnserver.go:283 +0xd0f
+main.main()
+	E:/work/DSanguoCODE/trunk/server/src/tools/gameserver/main.go:44 +0x3f2

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Node>
+	<config VillageLevel="3" RobotCount="1" IP="192.168.8.28" Port="8901" VillageCount="72" ChannelID="2" JustForChat="0" OpenFight="0" OpenBuild="1"/>
+    <!--config VillageLevel="3" RobotCount="5" IP="127.0.0.1" Port="8801"/> -->
+</Node>

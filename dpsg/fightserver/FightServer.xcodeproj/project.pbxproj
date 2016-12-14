@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0C149E1706C35800A85ACC /* liblibevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C149B1706C35800A85ACC /* liblibevent.a */; };
+		3F0C149F1706C35800A85ACC /* libNetWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C149C1706C35800A85ACC /* libNetWork.a */; };
+		3F0C14A51706C3A600A85ACC /* CConnectionMgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C14A11706C3A600A85ACC /* CConnectionMgr.cpp */; };
+		3F0C14A61706C3A600A85ACC /* CFightServerDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C14A31706C3A600A85ACC /* CFightServerDispatcher.cpp */; };
+		3F2236C317096DF7000C9499 /* msg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3F2236C117096DF7000C9499 /* msg.pb.cc */; };
+		3F375C991705363D005AB87E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F375C981705363D005AB87E /* main.cpp */; };
+		3F375C9B1705363D005AB87E /* FightServer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3F375C9A1705363D005AB87E /* FightServer.1 */; };
+		3F375CA817053834005AB87E /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F375CA717053834005AB87E /* libstdc++.6.dylib */; };
+		3F3E11121706D74F00F19E35 /* libCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3E11111706D74F00F19E35 /* libCommon.a */; };
+		6A37FE3C176B1B360038D0C7 /* LogicHeroUpgradeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A37FE3A176B1B360038D0C7 /* LogicHeroUpgradeCommand.cpp */; };
+		6A37FE3F176B1B540038D0C7 /* LogicHeroSummonComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A37FE3D176B1B540038D0C7 /* LogicHeroSummonComponent.cpp */; };
+		6A4C2FAE1705618C00E60353 /* ConfigManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F631705614E00E60353 /* ConfigManager.cpp */; };
+		6A4C2FAF1705618C00E60353 /* LogicBuildCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F671705614E00E60353 /* LogicBuildCommand.cpp */; };
+		6A4C2FB01705618C00E60353 /* LogicBuilding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F691705614E00E60353 /* LogicBuilding.cpp */; };
+		6A4C2FB11705618C00E60353 /* LogicCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F6B1705614E00E60353 /* LogicCharacter.cpp */; };
+		6A4C2FB21705618C00E60353 /* LogicCombatComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F6D1705614E00E60353 /* LogicCombatComponent.cpp */; };
+		6A4C2FB31705618C00E60353 /* LogicCommandManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F6F1705614E00E60353 /* LogicCommandManager.cpp */; };
+		6A4C2FB41705618C00E60353 /* LogicComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F711705614E00E60353 /* LogicComponent.cpp */; };
+		6A4C2FB51705618C00E60353 /* LogicFinishNowCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F731705614E00E60353 /* LogicFinishNowCommand.cpp */; };
+		6A4C2FB61705618C00E60353 /* LogicGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F751705614E00E60353 /* LogicGameObject.cpp */; };
+		6A4C2FB71705618C00E60353 /* LogicHitpointComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F771705614E00E60353 /* LogicHitpointComponent.cpp */; };
+		6A4C2FB81705618C00E60353 /* LogicInitializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F791705614E00E60353 /* LogicInitializer.cpp */; };
+		6A4C2FB91705618C00E60353 /* LogicMessageDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F7D1705614E00E60353 /* LogicMessageDispatcher.cpp */; };
+		6A4C2FBA1705618C00E60353 /* LogicMessagePort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F7F1705614E00E60353 /* LogicMessagePort.cpp */; };
+		6A4C2FBB1705618C00E60353 /* LogicMovementComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F811705614E00E60353 /* LogicMovementComponent.cpp */; };
+		6A4C2FBC1705618C00E60353 /* LogicPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F831705614E00E60353 /* LogicPath.cpp */; };
+		6A4C2FBD1705618C00E60353 /* LogicPathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F851705614E00E60353 /* LogicPathFinder.cpp */; };
+		6A4C2FBF1705618C00E60353 /* LogicResProductionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F891705614E00E60353 /* LogicResProductionComponent.cpp */; };
+		6A4C2FC01705618C00E60353 /* LogicResStorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F8B1705614E00E60353 /* LogicResStorageComponent.cpp */; };
+		6A4C2FC21705618C00E60353 /* LogicSkill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F8F1705614E00E60353 /* LogicSkill.cpp */; };
+		6A4C2FC31705618C00E60353 /* LogicSkillManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F911705614E00E60353 /* LogicSkillManager.cpp */; };
+		6A4C2FC51705618C00E60353 /* LogicTickManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F951705614E00E60353 /* LogicTickManager.cpp */; };
+		6A4C2FC61705618C00E60353 /* LogicTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F971705614E00E60353 /* LogicTimer.cpp */; };
+		6A4C2FC71705618C00E60353 /* LogicTrainingUnitCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F991705614E00E60353 /* LogicTrainingUnitCommand.cpp */; };
+		6A4C2FC81705618C00E60353 /* LogicUnitProductionComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F9B1705614E00E60353 /* LogicUnitProductionComponent.cpp */; };
+		6A4C2FC91705618C00E60353 /* LogicUnitStorageComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F9D1705614E00E60353 /* LogicUnitStorageComponent.cpp */; };
+		6A4C2FCA1705618C00E60353 /* LogicUnitUpgradeCommand.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2F9F1705614E00E60353 /* LogicUnitUpgradeCommand.cpp */; };
+		6A4C2FCB1705618C00E60353 /* LogicUnitUpgradeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FA11705614E00E60353 /* LogicUnitUpgradeComponent.cpp */; };
+		6A4C2FCC1705618C00E60353 /* LogicUtilityFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FA31705614E00E60353 /* LogicUtilityFunctions.cpp */; };
+		6A4C2FCD1705618C00E60353 /* LogicVillage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FA51705614E00E60353 /* LogicVillage.cpp */; };
+		6A4C2FCE1705618C00E60353 /* LogicWorkerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FA71705614E00E60353 /* LogicWorkerManager.cpp */; };
+		6A4C2FCF1705618C00E60353 /* TimeSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FAA1705614E00E60353 /* TimeSystem.cpp */; };
+		6A4C2FD01705618C00E60353 /* XMLParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A4C2FAC1705614E00E60353 /* XMLParser.cpp */; };
+		6A4C2FE5170580DA00E60353 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A4C2FE4170580DA00E60353 /* libxml2.dylib */; };
+		6A7D64A117753E6200C433DA /* LogicBuff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A7D649F17753E6200C433DA /* LogicBuff.cpp */; };
+		6A86F41517C5A6E60056A899 /* LogicBuildingUpgradeComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A86F41317C5A6E60056A899 /* LogicBuildingUpgradeComponent.cpp */; };
+		6A9932A41720C403000D7E6C /* LogicClanComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A9932A21720C403000D7E6C /* LogicClanComponent.cpp */; };
+		6ACB3289171115580081010A /* LogicMemoryLeckDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB3287171115580081010A /* LogicMemoryLeckDetector.cpp */; };
+		6ACB328C171115850081010A /* LogicBattle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB328A171115850081010A /* LogicBattle.cpp */; };
+		6ACB329F17115E990081010A /* FightCalculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB329E17115E990081010A /* FightCalculator.cpp */; };
+		6ACB79E2171D468600B383EC /* LogicAvatar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB79E0171D468600B383EC /* LogicAvatar.cpp */; };
+		6AF7B1EA1834B54F00DC84C4 /* LogSpellSkillComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AF7B1E81834B54F00DC84C4 /* LogSpellSkillComponent.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F375C931705363D005AB87E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				3F375C9B1705363D005AB87E /* FightServer.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3F0C149B1706C35800A85ACC /* liblibevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibevent.a; path = "../../../engine/src/Network/libevent-1.4.14b-stable/build/Debug/liblibevent.a"; sourceTree = "<group>"; };
+		3F0C149C1706C35800A85ACC /* libNetWork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNetWork.a; path = ../../../engine/src/NetWork/build/Debug/libNetWork.a; sourceTree = "<group>"; };
+		3F0C14A11706C3A600A85ACC /* CConnectionMgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CConnectionMgr.cpp; path = FightServer/CConnectionMgr.cpp; sourceTree = "<group>"; };
+		3F0C14A21706C3A600A85ACC /* CConnectionMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CConnectionMgr.h; path = FightServer/CConnectionMgr.h; sourceTree = "<group>"; };
+		3F0C14A31706C3A600A85ACC /* CFightServerDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CFightServerDispatcher.cpp; path = FightServer/CFightServerDispatcher.cpp; sourceTree = "<group>"; };
+		3F0C14A41706C3A600A85ACC /* CFightServerDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFightServerDispatcher.h; path = FightServer/CFightServerDispatcher.h; sourceTree = "<group>"; };
+		3F2236C117096DF7000C9499 /* msg.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = msg.pb.cc; path = ../../../rpc/proto/msg.pb.cc; sourceTree = "<group>"; };
+		3F2236C217096DF7000C9499 /* msg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msg.pb.h; path = ../../../rpc/proto/msg.pb.h; sourceTree = "<group>"; };
+		3F2236C417097182000C9499 /* msg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = msg.proto; path = ../../../rpc/proto/msg.proto; sourceTree = "<group>"; };
+		3F375C951705363D005AB87E /* FightServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FightServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F375C981705363D005AB87E /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3F375C9A1705363D005AB87E /* FightServer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = FightServer.1; sourceTree = "<group>"; };
+		3F375CA717053834005AB87E /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		3F3E11111706D74F00F19E35 /* libCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCommon.a; path = ../../../engine/src/Common/build/Debug/libCommon.a; sourceTree = "<group>"; };
+		6A37FE3A176B1B360038D0C7 /* LogicHeroUpgradeCommand.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicHeroUpgradeCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroUpgradeCommand.cpp; sourceTree = "<group>"; };
+		6A37FE3B176B1B360038D0C7 /* LogicHeroUpgradeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicHeroUpgradeCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroUpgradeCommand.h; sourceTree = "<group>"; };
+		6A37FE3D176B1B540038D0C7 /* LogicHeroSummonComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicHeroSummonComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroSummonComponent.cpp; sourceTree = "<group>"; };
+		6A37FE3E176B1B540038D0C7 /* LogicHeroSummonComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicHeroSummonComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHeroSummonComponent.h; sourceTree = "<group>"; };
+		6A4C2F631705614E00E60353 /* ConfigManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = ConfigManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/ConfigManager.cpp; sourceTree = "<group>"; };
+		6A4C2F641705614E00E60353 /* ConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ConfigManager.h; path = ../../../../client/dpsg/Classes/GameLogic/ConfigManager.h; sourceTree = "<group>"; };
+		6A4C2F651705614E00E60353 /* GameLogicDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameLogicDefinitions.h; path = ../../../../client/dpsg/Classes/GameLogic/GameLogicDefinitions.h; sourceTree = "<group>"; };
+		6A4C2F671705614E00E60353 /* LogicBuildCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicBuildCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildCommand.cpp; sourceTree = "<group>"; };
+		6A4C2F681705614E00E60353 /* LogicBuildCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicBuildCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildCommand.h; sourceTree = "<group>"; };
+		6A4C2F691705614E00E60353 /* LogicBuilding.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicBuilding.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuilding.cpp; sourceTree = "<group>"; };
+		6A4C2F6A1705614E00E60353 /* LogicBuilding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicBuilding.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuilding.h; sourceTree = "<group>"; };
+		6A4C2F6B1705614E00E60353 /* LogicCharacter.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicCharacter.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCharacter.cpp; sourceTree = "<group>"; };
+		6A4C2F6C1705614E00E60353 /* LogicCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicCharacter.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCharacter.h; sourceTree = "<group>"; };
+		6A4C2F6D1705614E00E60353 /* LogicCombatComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicCombatComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCombatComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F6E1705614E00E60353 /* LogicCombatComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicCombatComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCombatComponent.h; sourceTree = "<group>"; };
+		6A4C2F6F1705614E00E60353 /* LogicCommandManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicCommandManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicCommandManager.cpp; sourceTree = "<group>"; };
+		6A4C2F701705614E00E60353 /* LogicCommandManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicCommandManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicCommandManager.h; sourceTree = "<group>"; };
+		6A4C2F711705614E00E60353 /* LogicComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F721705614E00E60353 /* LogicComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicComponent.h; sourceTree = "<group>"; };
+		6A4C2F731705614E00E60353 /* LogicFinishNowCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicFinishNowCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicFinishNowCommand.cpp; sourceTree = "<group>"; };
+		6A4C2F741705614E00E60353 /* LogicFinishNowCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicFinishNowCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicFinishNowCommand.h; sourceTree = "<group>"; };
+		6A4C2F751705614E00E60353 /* LogicGameObject.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicGameObject.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicGameObject.cpp; sourceTree = "<group>"; };
+		6A4C2F761705614E00E60353 /* LogicGameObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicGameObject.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicGameObject.h; sourceTree = "<group>"; };
+		6A4C2F771705614E00E60353 /* LogicHitpointComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicHitpointComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicHitpointComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F781705614E00E60353 /* LogicHitpointComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicHitpointComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicHitpointComponent.h; sourceTree = "<group>"; };
+		6A4C2F791705614E00E60353 /* LogicInitializer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicInitializer.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicInitializer.cpp; sourceTree = "<group>"; };
+		6A4C2F7A1705614E00E60353 /* LogicInitializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicInitializer.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicInitializer.h; sourceTree = "<group>"; };
+		6A4C2F7B1705614E00E60353 /* LogicMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicMessage.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessage.h; sourceTree = "<group>"; };
+		6A4C2F7C1705614E00E60353 /* LogicMessageDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicMessageDefinition.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDefinition.h; sourceTree = "<group>"; };
+		6A4C2F7D1705614E00E60353 /* LogicMessageDispatcher.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicMessageDispatcher.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDispatcher.cpp; sourceTree = "<group>"; };
+		6A4C2F7E1705614E00E60353 /* LogicMessageDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicMessageDispatcher.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessageDispatcher.h; sourceTree = "<group>"; };
+		6A4C2F7F1705614E00E60353 /* LogicMessagePort.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicMessagePort.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessagePort.cpp; sourceTree = "<group>"; };
+		6A4C2F801705614E00E60353 /* LogicMessagePort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicMessagePort.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMessagePort.h; sourceTree = "<group>"; };
+		6A4C2F811705614E00E60353 /* LogicMovementComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicMovementComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMovementComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F821705614E00E60353 /* LogicMovementComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicMovementComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMovementComponent.h; sourceTree = "<group>"; };
+		6A4C2F831705614E00E60353 /* LogicPath.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicPath.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicPath.cpp; sourceTree = "<group>"; };
+		6A4C2F841705614E00E60353 /* LogicPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicPath.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicPath.h; sourceTree = "<group>"; };
+		6A4C2F851705614E00E60353 /* LogicPathFinder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicPathFinder.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicPathFinder.cpp; sourceTree = "<group>"; };
+		6A4C2F861705614E00E60353 /* LogicPathFinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicPathFinder.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicPathFinder.h; sourceTree = "<group>"; };
+		6A4C2F891705614E00E60353 /* LogicResProductionComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicResProductionComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicResProductionComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F8A1705614E00E60353 /* LogicResProductionComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicResProductionComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicResProductionComponent.h; sourceTree = "<group>"; };
+		6A4C2F8B1705614E00E60353 /* LogicResStorageComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicResStorageComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicResStorageComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F8C1705614E00E60353 /* LogicResStorageComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicResStorageComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicResStorageComponent.h; sourceTree = "<group>"; };
+		6A4C2F8F1705614E00E60353 /* LogicSkill.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicSkill.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkill.cpp; sourceTree = "<group>"; };
+		6A4C2F901705614E00E60353 /* LogicSkill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicSkill.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkill.h; sourceTree = "<group>"; };
+		6A4C2F911705614E00E60353 /* LogicSkillManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicSkillManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkillManager.cpp; sourceTree = "<group>"; };
+		6A4C2F921705614E00E60353 /* LogicSkillManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicSkillManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicSkillManager.h; sourceTree = "<group>"; };
+		6A4C2F951705614E00E60353 /* LogicTickManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicTickManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTickManager.cpp; sourceTree = "<group>"; };
+		6A4C2F961705614E00E60353 /* LogicTickManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicTickManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTickManager.h; sourceTree = "<group>"; };
+		6A4C2F971705614E00E60353 /* LogicTimer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicTimer.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTimer.cpp; sourceTree = "<group>"; };
+		6A4C2F981705614E00E60353 /* LogicTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicTimer.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTimer.h; sourceTree = "<group>"; };
+		6A4C2F991705614E00E60353 /* LogicTrainingUnitCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicTrainingUnitCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingUnitCommand.cpp; sourceTree = "<group>"; };
+		6A4C2F9A1705614E00E60353 /* LogicTrainingUnitCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicTrainingUnitCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicTrainingUnitCommand.h; sourceTree = "<group>"; };
+		6A4C2F9B1705614E00E60353 /* LogicUnitProductionComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicUnitProductionComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitProductionComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F9C1705614E00E60353 /* LogicUnitProductionComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicUnitProductionComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitProductionComponent.h; sourceTree = "<group>"; };
+		6A4C2F9D1705614E00E60353 /* LogicUnitStorageComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicUnitStorageComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitStorageComponent.cpp; sourceTree = "<group>"; };
+		6A4C2F9E1705614E00E60353 /* LogicUnitStorageComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicUnitStorageComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitStorageComponent.h; sourceTree = "<group>"; };
+		6A4C2F9F1705614E00E60353 /* LogicUnitUpgradeCommand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicUnitUpgradeCommand.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeCommand.cpp; sourceTree = "<group>"; };
+		6A4C2FA01705614E00E60353 /* LogicUnitUpgradeCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicUnitUpgradeCommand.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeCommand.h; sourceTree = "<group>"; };
+		6A4C2FA11705614E00E60353 /* LogicUnitUpgradeComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicUnitUpgradeComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeComponent.cpp; sourceTree = "<group>"; };
+		6A4C2FA21705614E00E60353 /* LogicUnitUpgradeComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicUnitUpgradeComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUnitUpgradeComponent.h; sourceTree = "<group>"; };
+		6A4C2FA31705614E00E60353 /* LogicUtilityFunctions.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicUtilityFunctions.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicUtilityFunctions.cpp; sourceTree = "<group>"; };
+		6A4C2FA41705614E00E60353 /* LogicUtilityFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicUtilityFunctions.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicUtilityFunctions.h; sourceTree = "<group>"; };
+		6A4C2FA51705614E00E60353 /* LogicVillage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicVillage.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicVillage.cpp; sourceTree = "<group>"; };
+		6A4C2FA61705614E00E60353 /* LogicVillage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicVillage.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicVillage.h; sourceTree = "<group>"; };
+		6A4C2FA71705614E00E60353 /* LogicWorkerManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = LogicWorkerManager.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicWorkerManager.cpp; sourceTree = "<group>"; };
+		6A4C2FA81705614E00E60353 /* LogicWorkerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LogicWorkerManager.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicWorkerManager.h; sourceTree = "<group>"; };
+		6A4C2FA91705614E00E60353 /* MemoryAllocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MemoryAllocator.h; path = ../../../../client/dpsg/Classes/GameLogic/MemoryAllocator.h; sourceTree = "<group>"; };
+		6A4C2FAA1705614E00E60353 /* TimeSystem.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = TimeSystem.cpp; path = ../../../../client/dpsg/Classes/GameLogic/TimeSystem.cpp; sourceTree = "<group>"; };
+		6A4C2FAB1705614E00E60353 /* TimeSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimeSystem.h; path = ../../../../client/dpsg/Classes/GameLogic/TimeSystem.h; sourceTree = "<group>"; };
+		6A4C2FAC1705614E00E60353 /* XMLParser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; name = XMLParser.cpp; path = ../../../../client/dpsg/Classes/GameLogic/XMLParser.cpp; sourceTree = "<group>"; };
+		6A4C2FAD1705614E00E60353 /* XMLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMLParser.h; path = ../../../../client/dpsg/Classes/GameLogic/XMLParser.h; sourceTree = "<group>"; };
+		6A4C2FDA1705768100E60353 /* float2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = float2.h; path = ../../../../client/dpsg/GameFramework/float2.h; sourceTree = "<group>"; };
+		6A4C2FE117057BD600E60353 /* line2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = line2.h; path = ../../../../client/dpsg/GameFramework/line2.h; sourceTree = "<group>"; };
+		6A4C2FE4170580DA00E60353 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		6A7D649F17753E6200C433DA /* LogicBuff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuff.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuff.cpp; sourceTree = "<group>"; };
+		6A7D64A017753E6200C433DA /* LogicBuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuff.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuff.h; sourceTree = "<group>"; };
+		6A86F41317C5A6E60056A899 /* LogicBuildingUpgradeComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBuildingUpgradeComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildingUpgradeComponent.cpp; sourceTree = "<group>"; };
+		6A86F41417C5A6E60056A899 /* LogicBuildingUpgradeComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBuildingUpgradeComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBuildingUpgradeComponent.h; sourceTree = "<group>"; };
+		6A9932A21720C403000D7E6C /* LogicClanComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicClanComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicClanComponent.cpp; sourceTree = "<group>"; };
+		6A9932A31720C403000D7E6C /* LogicClanComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicClanComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicClanComponent.h; sourceTree = "<group>"; };
+		6ACB3287171115580081010A /* LogicMemoryLeckDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicMemoryLeckDetector.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicMemoryLeckDetector.cpp; sourceTree = "<group>"; };
+		6ACB3288171115580081010A /* LogicMemoryLeckDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicMemoryLeckDetector.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicMemoryLeckDetector.h; sourceTree = "<group>"; };
+		6ACB328A171115850081010A /* LogicBattle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicBattle.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicBattle.cpp; sourceTree = "<group>"; };
+		6ACB328B171115850081010A /* LogicBattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicBattle.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicBattle.h; sourceTree = "<group>"; };
+		6ACB329D17115E470081010A /* FightCalculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FightCalculator.h; path = ../../fightserver/FightServer/FightCalculator.h; sourceTree = "<group>"; };
+		6ACB329E17115E990081010A /* FightCalculator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FightCalculator.cpp; path = ../../fightserver/FightServer/FightCalculator.cpp; sourceTree = "<group>"; };
+		6ACB79E0171D468600B383EC /* LogicAvatar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogicAvatar.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogicAvatar.cpp; sourceTree = "<group>"; };
+		6ACB79E1171D468600B383EC /* LogicAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicAvatar.h; path = ../../../../client/dpsg/Classes/GameLogic/LogicAvatar.h; sourceTree = "<group>"; };
+		6AF7B1E81834B54F00DC84C4 /* LogSpellSkillComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LogSpellSkillComponent.cpp; path = ../../../../client/dpsg/Classes/GameLogic/LogSpellSkillComponent.cpp; sourceTree = "<group>"; };
+		6AF7B1E91834B54F00DC84C4 /* LogSpellSkillComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogSpellSkillComponent.h; path = ../../../../client/dpsg/Classes/GameLogic/LogSpellSkillComponent.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F375C921705363D005AB87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F3E11121706D74F00F19E35 /* libCommon.a in Frameworks */,
+				3F0C149E1706C35800A85ACC /* liblibevent.a in Frameworks */,
+				3F0C149F1706C35800A85ACC /* libNetWork.a in Frameworks */,
+				6A4C2FE5170580DA00E60353 /* libxml2.dylib in Frameworks */,
+				3F375CA817053834005AB87E /* libstdc++.6.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0C14A01706C37700A85ACC /* ConnectionMgr */ = {
+			isa = PBXGroup;
+			children = (
+				3F0C14A11706C3A600A85ACC /* CConnectionMgr.cpp */,
+				3F0C14A21706C3A600A85ACC /* CConnectionMgr.h */,
+				3F0C14A31706C3A600A85ACC /* CFightServerDispatcher.cpp */,
+				3F0C14A41706C3A600A85ACC /* CFightServerDispatcher.h */,
+			);
+			name = ConnectionMgr;
+			sourceTree = "<group>";
+		};
+		3F2236C017096DE2000C9499 /* Rpc */ = {
+			isa = PBXGroup;
+			children = (
+				3F2236C417097182000C9499 /* msg.proto */,
+				3F2236C117096DF7000C9499 /* msg.pb.cc */,
+				3F2236C217096DF7000C9499 /* msg.pb.h */,
+			);
+			name = Rpc;
+			sourceTree = "<group>";
+		};
+		3F375C8C1705363C005AB87E = {
+			isa = PBXGroup;
+			children = (
+				3F2236C017096DE2000C9499 /* Rpc */,
+				3F3E11111706D74F00F19E35 /* libCommon.a */,
+				3F0C14A01706C37700A85ACC /* ConnectionMgr */,
+				3F0C149B1706C35800A85ACC /* liblibevent.a */,
+				3F0C149C1706C35800A85ACC /* libNetWork.a */,
+				6A4C2FE4170580DA00E60353 /* libxml2.dylib */,
+				3F375CA717053834005AB87E /* libstdc++.6.dylib */,
+				3F375C971705363D005AB87E /* FightServer */,
+				3F375C961705363D005AB87E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F375C961705363D005AB87E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F375C951705363D005AB87E /* FightServer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F375C971705363D005AB87E /* FightServer */ = {
+			isa = PBXGroup;
+			children = (
+				6A4C2FD91705766500E60353 /* Math */,
+				6A4C2F621705613500E60353 /* GameLogic */,
+				3F375C981705363D005AB87E /* main.cpp */,
+				3F375C9A1705363D005AB87E /* FightServer.1 */,
+				6ACB329D17115E470081010A /* FightCalculator.h */,
+				6ACB329E17115E990081010A /* FightCalculator.cpp */,
+			);
+			path = FightServer;
+			sourceTree = "<group>";
+		};
+		6A4C2F621705613500E60353 /* GameLogic */ = {
+			isa = PBXGroup;
+			children = (
+				6AF7B1E81834B54F00DC84C4 /* LogSpellSkillComponent.cpp */,
+				6AF7B1E91834B54F00DC84C4 /* LogSpellSkillComponent.h */,
+				6A86F41317C5A6E60056A899 /* LogicBuildingUpgradeComponent.cpp */,
+				6A86F41417C5A6E60056A899 /* LogicBuildingUpgradeComponent.h */,
+				6A7D649F17753E6200C433DA /* LogicBuff.cpp */,
+				6A7D64A017753E6200C433DA /* LogicBuff.h */,
+				6ACB328A171115850081010A /* LogicBattle.cpp */,
+				6ACB328B171115850081010A /* LogicBattle.h */,
+				6ACB3287171115580081010A /* LogicMemoryLeckDetector.cpp */,
+				6ACB3288171115580081010A /* LogicMemoryLeckDetector.h */,
+				6A4C2F631705614E00E60353 /* ConfigManager.cpp */,
+				6A4C2F641705614E00E60353 /* ConfigManager.h */,
+				6A4C2F651705614E00E60353 /* GameLogicDefinitions.h */,
+				6A4C2F671705614E00E60353 /* LogicBuildCommand.cpp */,
+				6A4C2F681705614E00E60353 /* LogicBuildCommand.h */,
+				6A4C2F691705614E00E60353 /* LogicBuilding.cpp */,
+				6A4C2F6A1705614E00E60353 /* LogicBuilding.h */,
+				6A4C2F6B1705614E00E60353 /* LogicCharacter.cpp */,
+				6A4C2F6C1705614E00E60353 /* LogicCharacter.h */,
+				6A4C2F6D1705614E00E60353 /* LogicCombatComponent.cpp */,
+				6A4C2F6E1705614E00E60353 /* LogicCombatComponent.h */,
+				6A4C2F6F1705614E00E60353 /* LogicCommandManager.cpp */,
+				6A4C2F701705614E00E60353 /* LogicCommandManager.h */,
+				6A4C2F711705614E00E60353 /* LogicComponent.cpp */,
+				6A4C2F721705614E00E60353 /* LogicComponent.h */,
+				6A4C2F731705614E00E60353 /* LogicFinishNowCommand.cpp */,
+				6A4C2F741705614E00E60353 /* LogicFinishNowCommand.h */,
+				6A4C2F751705614E00E60353 /* LogicGameObject.cpp */,
+				6A4C2F761705614E00E60353 /* LogicGameObject.h */,
+				6A4C2F771705614E00E60353 /* LogicHitpointComponent.cpp */,
+				6A4C2F781705614E00E60353 /* LogicHitpointComponent.h */,
+				6A4C2F791705614E00E60353 /* LogicInitializer.cpp */,
+				6A4C2F7A1705614E00E60353 /* LogicInitializer.h */,
+				6A4C2F7B1705614E00E60353 /* LogicMessage.h */,
+				6A4C2F7C1705614E00E60353 /* LogicMessageDefinition.h */,
+				6A4C2F7D1705614E00E60353 /* LogicMessageDispatcher.cpp */,
+				6A4C2F7E1705614E00E60353 /* LogicMessageDispatcher.h */,
+				6A4C2F7F1705614E00E60353 /* LogicMessagePort.cpp */,
+				6A4C2F801705614E00E60353 /* LogicMessagePort.h */,
+				6A4C2F811705614E00E60353 /* LogicMovementComponent.cpp */,
+				6A4C2F821705614E00E60353 /* LogicMovementComponent.h */,
+				6A4C2F831705614E00E60353 /* LogicPath.cpp */,
+				6A4C2F841705614E00E60353 /* LogicPath.h */,
+				6A4C2F851705614E00E60353 /* LogicPathFinder.cpp */,
+				6A4C2F861705614E00E60353 /* LogicPathFinder.h */,
+				6A4C2F891705614E00E60353 /* LogicResProductionComponent.cpp */,
+				6A4C2F8A1705614E00E60353 /* LogicResProductionComponent.h */,
+				6A4C2F8B1705614E00E60353 /* LogicResStorageComponent.cpp */,
+				6A4C2F8C1705614E00E60353 /* LogicResStorageComponent.h */,
+				6A4C2F8F1705614E00E60353 /* LogicSkill.cpp */,
+				6A4C2F901705614E00E60353 /* LogicSkill.h */,
+				6A4C2F911705614E00E60353 /* LogicSkillManager.cpp */,
+				6A4C2F921705614E00E60353 /* LogicSkillManager.h */,
+				6A4C2F951705614E00E60353 /* LogicTickManager.cpp */,
+				6A4C2F961705614E00E60353 /* LogicTickManager.h */,
+				6A4C2F971705614E00E60353 /* LogicTimer.cpp */,
+				6A4C2F981705614E00E60353 /* LogicTimer.h */,
+				6A4C2F991705614E00E60353 /* LogicTrainingUnitCommand.cpp */,
+				6A4C2F9A1705614E00E60353 /* LogicTrainingUnitCommand.h */,
+				6A4C2F9B1705614E00E60353 /* LogicUnitProductionComponent.cpp */,
+				6A4C2F9C1705614E00E60353 /* LogicUnitProductionComponent.h */,
+				6A4C2F9D1705614E00E60353 /* LogicUnitStorageComponent.cpp */,
+				6A4C2F9E1705614E00E60353 /* LogicUnitStorageComponent.h */,
+				6A4C2F9F1705614E00E60353 /* LogicUnitUpgradeCommand.cpp */,
+				6A4C2FA01705614E00E60353 /* LogicUnitUpgradeCommand.h */,
+				6A4C2FA11705614E00E60353 /* LogicUnitUpgradeComponent.cpp */,
+				6A4C2FA21705614E00E60353 /* LogicUnitUpgradeComponent.h */,
+				6A4C2FA31705614E00E60353 /* LogicUtilityFunctions.cpp */,
+				6A4C2FA41705614E00E60353 /* LogicUtilityFunctions.h */,
+				6A9932A21720C403000D7E6C /* LogicClanComponent.cpp */,
+				6A9932A31720C403000D7E6C /* LogicClanComponent.h */,
+				6A4C2FA51705614E00E60353 /* LogicVillage.cpp */,
+				6A4C2FA61705614E00E60353 /* LogicVillage.h */,
+				6A4C2FA71705614E00E60353 /* LogicWorkerManager.cpp */,
+				6A4C2FA81705614E00E60353 /* LogicWorkerManager.h */,
+				6A4C2FA91705614E00E60353 /* MemoryAllocator.h */,
+				6A4C2FAA1705614E00E60353 /* TimeSystem.cpp */,
+				6A4C2FAB1705614E00E60353 /* TimeSystem.h */,
+				6A4C2FAC1705614E00E60353 /* XMLParser.cpp */,
+				6A4C2FAD1705614E00E60353 /* XMLParser.h */,
+				6ACB79E0171D468600B383EC /* LogicAvatar.cpp */,
+				6ACB79E1171D468600B383EC /* LogicAvatar.h */,
+				6A37FE3A176B1B360038D0C7 /* LogicHeroUpgradeCommand.cpp */,
+				6A37FE3B176B1B360038D0C7 /* LogicHeroUpgradeCommand.h */,
+				6A37FE3D176B1B540038D0C7 /* LogicHeroSummonComponent.cpp */,
+				6A37FE3E176B1B540038D0C7 /* LogicHeroSummonComponent.h */,
+			);
+			name = GameLogic;
+			sourceTree = "<group>";
+		};
+		6A4C2FD91705766500E60353 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				6A4C2FE117057BD600E60353 /* line2.h */,
+				6A4C2FDA1705768100E60353 /* float2.h */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F375C941705363D005AB87E /* FightServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F375C9E1705363D005AB87E /* Build configuration list for PBXNativeTarget "FightServer" */;
+			buildPhases = (
+				3F375C911705363D005AB87E /* Sources */,
+				3F375C921705363D005AB87E /* Frameworks */,
+				3F375C931705363D005AB87E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FightServer;
+			productName = FightServer;
+			productReference = 3F375C951705363D005AB87E /* FightServer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F375C8D1705363C005AB87E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = keenblue;
+			};
+			buildConfigurationList = 3F375C901705363C005AB87E /* Build configuration list for PBXProject "FightServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F375C8C1705363C005AB87E;
+			productRefGroup = 3F375C961705363D005AB87E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F375C941705363D005AB87E /* FightServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F375C911705363D005AB87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A4C2FAE1705618C00E60353 /* ConfigManager.cpp in Sources */,
+				6A4C2FAF1705618C00E60353 /* LogicBuildCommand.cpp in Sources */,
+				6A4C2FB01705618C00E60353 /* LogicBuilding.cpp in Sources */,
+				6A4C2FB11705618C00E60353 /* LogicCharacter.cpp in Sources */,
+				6A4C2FB21705618C00E60353 /* LogicCombatComponent.cpp in Sources */,
+				6A4C2FB31705618C00E60353 /* LogicCommandManager.cpp in Sources */,
+				6A4C2FB41705618C00E60353 /* LogicComponent.cpp in Sources */,
+				6A4C2FB51705618C00E60353 /* LogicFinishNowCommand.cpp in Sources */,
+				6A4C2FB61705618C00E60353 /* LogicGameObject.cpp in Sources */,
+				6A4C2FB71705618C00E60353 /* LogicHitpointComponent.cpp in Sources */,
+				6A4C2FB81705618C00E60353 /* LogicInitializer.cpp in Sources */,
+				6A4C2FB91705618C00E60353 /* LogicMessageDispatcher.cpp in Sources */,
+				6A4C2FBA1705618C00E60353 /* LogicMessagePort.cpp in Sources */,
+				6A4C2FBB1705618C00E60353 /* LogicMovementComponent.cpp in Sources */,
+				6A4C2FBC1705618C00E60353 /* LogicPath.cpp in Sources */,
+				6A4C2FBD1705618C00E60353 /* LogicPathFinder.cpp in Sources */,
+				6A4C2FBF1705618C00E60353 /* LogicResProductionComponent.cpp in Sources */,
+				6A4C2FC01705618C00E60353 /* LogicResStorageComponent.cpp in Sources */,
+				6A4C2FC21705618C00E60353 /* LogicSkill.cpp in Sources */,
+				6A4C2FC31705618C00E60353 /* LogicSkillManager.cpp in Sources */,
+				6A4C2FC51705618C00E60353 /* LogicTickManager.cpp in Sources */,
+				6A4C2FC61705618C00E60353 /* LogicTimer.cpp in Sources */,
+				6A4C2FC71705618C00E60353 /* LogicTrainingUnitCommand.cpp in Sources */,
+				6A4C2FC81705618C00E60353 /* LogicUnitProductionComponent.cpp in Sources */,
+				6A4C2FC91705618C00E60353 /* LogicUnitStorageComponent.cpp in Sources */,
+				6AF7B1EA1834B54F00DC84C4 /* LogSpellSkillComponent.cpp in Sources */,
+				6A4C2FCA1705618C00E60353 /* LogicUnitUpgradeCommand.cpp in Sources */,
+				6A4C2FCB1705618C00E60353 /* LogicUnitUpgradeComponent.cpp in Sources */,
+				6A4C2FCC1705618C00E60353 /* LogicUtilityFunctions.cpp in Sources */,
+				6A4C2FCD1705618C00E60353 /* LogicVillage.cpp in Sources */,
+				6A4C2FCE1705618C00E60353 /* LogicWorkerManager.cpp in Sources */,
+				6A4C2FCF1705618C00E60353 /* TimeSystem.cpp in Sources */,
+				6A4C2FD01705618C00E60353 /* XMLParser.cpp in Sources */,
+				3F375C991705363D005AB87E /* main.cpp in Sources */,
+				3F0C14A51706C3A600A85ACC /* CConnectionMgr.cpp in Sources */,
+				3F0C14A61706C3A600A85ACC /* CFightServerDispatcher.cpp in Sources */,
+				3F2236C317096DF7000C9499 /* msg.pb.cc in Sources */,
+				6ACB3289171115580081010A /* LogicMemoryLeckDetector.cpp in Sources */,
+				6ACB328C171115850081010A /* LogicBattle.cpp in Sources */,
+				6ACB329F17115E990081010A /* FightCalculator.cpp in Sources */,
+				6ACB79E2171D468600B383EC /* LogicAvatar.cpp in Sources */,
+				6A9932A41720C403000D7E6C /* LogicClanComponent.cpp in Sources */,
+				6A37FE3C176B1B360038D0C7 /* LogicHeroUpgradeCommand.cpp in Sources */,
+				6A37FE3F176B1B540038D0C7 /* LogicHeroSummonComponent.cpp in Sources */,
+				6A7D64A117753E6200C433DA /* LogicBuff.cpp in Sources */,
+				6A86F41517C5A6E60056A899 /* LogicBuildingUpgradeComponent.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F375C9C1705363D005AB87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../engine/src/Common,
+					../../../engine/src/NetWork/net,
+					../../../engine/src,
+				);
+				KEEP_PRIVATE_EXTERNS = NO;
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx10.7;
+				SYMROOT = ../../../bin;
+			};
+			name = Debug;
+		};
+		3F375C9D1705363D005AB87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../../../engine/src/Common,
+					../../../engine/src/NetWork/net,
+					../../../engine/src,
+				);
+				KEEP_PRIVATE_EXTERNS = NO;
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
+				SDKROOT = macosx10.7;
+				SYMROOT = ../../../bin;
+			};
+			name = Release;
+		};
+		3F375C9F1705363D005AB87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../../engine/src/**",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					../../../rpc/proto,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../engine/lib/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/Common/build/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/Network/libevent-1.4.14b-stable/build/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/NetWork/build/Debug\"",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+			};
+			name = Debug;
+		};
+		3F375CA01705363D005AB87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					"../../../engine/src/**",
+					"\"$(SDKROOT)/usr/include/libxml2\"",
+					../../../rpc/proto,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../engine/lib/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/Common/build/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/Network/libevent-1.4.14b-stable/build/Debug\"",
+					"\"$(SRCROOT)/../../../engine/src/NetWork/build/Debug\"",
+				);
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F375C901705363C005AB87E /* Build configuration list for PBXProject "FightServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F375C9C1705363D005AB87E /* Debug */,
+				3F375C9D1705363D005AB87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F375C9E1705363D005AB87E /* Build configuration list for PBXNativeTarget "FightServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F375C9F1705363D005AB87E /* Debug */,
+				3F375CA01705363D005AB87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F375C8D1705363C005AB87E /* Project object */;
+}
