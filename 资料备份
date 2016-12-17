@@ -26,3 +26,10 @@ http://os.51cto.com/art/201308/408674.htm
 git常用命令
 http://www.cnblogs.com/mengdd/p/4153773.html
 
+go 语言proto rpc
+https://github.com/chai2010/protorpc
+
+
+//数据服务 redis缓存， mysql落地， 访问采用rpc。
+
+

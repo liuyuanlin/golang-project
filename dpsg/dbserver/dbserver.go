@@ -81,6 +81,7 @@ func NewDBServer(cfg common.DBConfig) (server *DBServer) {
 			var i uint8
 			for i = 0; i < poolCfg.Vnode; i++ {
 				keys := makeHash(fmt.Sprintf("%s#%d", poolCfg.NodeName, i))
+				logger.Info("Init DB %v", keys)
 				temDbs[keys] = leng
 				temDbInt = append(temDbInt, keys)
 			}

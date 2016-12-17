@@ -210,6 +210,8 @@ func (server *Server) register(rcvr interface{}, name string, useName bool) erro
 	s.typ = reflect.TypeOf(rcvr)
 	s.rcvr = reflect.ValueOf(rcvr)
 	sname := reflect.Indirect(s.rcvr).Type().Name()
+	log.Println("rpc:service name for type:", s.typ.String())
+	log.Println("rpc:service name for type:", sname)
 	if useName {
 		sname = name
 	}

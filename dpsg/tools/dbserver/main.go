@@ -34,7 +34,7 @@ func main() {
 	if err != nil {
 		logger.Fatal("net.Listen: %s", err.Error())
 	}
-
+	defer tsock.Close()
 	logger.Info("dbsserver Listen %s ", dbcfg.DBHost)
 
 	//dbg_sock, err := net.Listen("tcp", *dbg_addr)
@@ -48,8 +48,6 @@ func main() {
 	go db.StartServices(dbServer, tsock)
 
 	db.WaitForExit(dbServer)
-
-	tsock.Close()
 
 	logger.Info("dbsserver end")
 }
