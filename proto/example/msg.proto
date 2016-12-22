@@ -1,0 +1,57 @@
+package example;
+
+
+enum FOO { X = 17; };
+
+message Test {
+	required string label = 1;
+	optional int32 type = 2 [default=77];
+	repeated int64 reps = 3;
+	optional group OptionalGroup = 4 {
+		required string RequiredField = 5;
+	}
+}
+
+enum MsgId{
+	DB_SET = 0;
+	DB_GET = 1;
+}
+
+enum MsgType{
+	MSG_REQUEST = 0;
+	MSG_RESPONSE = 1;
+	MSG_NOTIFY = 2;
+}
+
+message MsgHead{
+	required MsgId msgId = 1;
+	required MsgType msgType = 2;
+	optional bytes msgBody = 3;
+}
+
+message  DBSetRequest{
+	required uint64 uid = 1;
+	required bytes uidInfo = 2;
+}
+
+message  DBSetResponse{
+	required uint64 uid=1;
+	required int32 result=2;
+}
+
+message  DBGetRequest{
+	required uint64 uid = 1;
+}
+
+message  DBGetResponse{
+	required uint64 uid = 1;
+	required int32 result = 2;
+	optional bytes uidInfo = 3;
+}
+
+message PlayerInfo{
+	required uint64 uid = 1;
+	required string name = 2;
+	required int32 age = 3;
+	required string phoneNum = 4;
+}
