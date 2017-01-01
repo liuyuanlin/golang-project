@@ -28,8 +28,7 @@ http://www.cnblogs.com/mengdd/p/4153773.html
 
 go 语言proto rpc
 https://github.com/chai2010/protorpc
-protoc --plugin=protoc-gen-go=../../protoc-gen-go/protoc-gen-go --go
-_out=plugins=protorpc:. echo.proto
+protoc --plugin=protoc-gen-go=../../protoc-gen-go/protoc-gen-go --go_out=plugins=protorpc:.echo.proto
 
 
 
