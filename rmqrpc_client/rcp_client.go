@@ -6,9 +6,9 @@ import (
 	"net/rpc"
 	//	"time"
 
-	"rmqrpc"
+	"github.com/liuyuanlin/rmqrpc"
 
-	msg "rmqrpc/examples/message.pb"
+	msg "github.com/liuyuanlin/rmqrpc/examples/message.pb"
 )
 
 func main() {

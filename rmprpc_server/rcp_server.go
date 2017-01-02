@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/rpc"
 
-	"rmqrpc"
+	"github.com/liuyuanlin/rmqrpc"
 
-	msg "rmqrpc/examples/message.pb"
+	msg "github.com/liuyuanlin/rmqrpc/examples/message.pb"
 )
 
 type Arith int
